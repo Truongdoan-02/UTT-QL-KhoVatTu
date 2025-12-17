@@ -1,0 +1,557 @@
+﻿namespace Quanli_vattu
+{
+    partial class Doitac_NCC
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.iMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bÁNHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.đỐITÁCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhàCungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sẢNPHẢMDỊCHVỤToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.qUẢNLÍKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.qUẢNLÍTHUCHIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bÁOCÁOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvNCC = new System.Windows.Forms.DataGridView();
+            this.Madoitac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tendoitac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nhomdoitac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGhichu = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cboNhomdoitac = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnXuat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtTendoitac = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtMadoitac = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iMSToolStripMenuItem,
+            this.bÁNHÀNGToolStripMenuItem,
+            this.đỐITÁCToolStripMenuItem,
+            this.sẢNPHẢMDỊCHVỤToolStripMenuItem,
+            this.qUẢNLÍKHOToolStripMenuItem,
+            this.qUẢNLÍTHUCHIToolStripMenuItem,
+            this.bÁOCÁOToolStripMenuItem,
+            this.nHÂNVIÊNToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(976, 54);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // iMSToolStripMenuItem
+            // 
+            this.iMSToolStripMenuItem.AutoSize = false;
+            this.iMSToolStripMenuItem.Name = "iMSToolStripMenuItem";
+            this.iMSToolStripMenuItem.Size = new System.Drawing.Size(100, 50);
+            this.iMSToolStripMenuItem.Text = "IMS";
+            // 
+            // bÁNHÀNGToolStripMenuItem
+            // 
+            this.bÁNHÀNGToolStripMenuItem.Name = "bÁNHÀNGToolStripMenuItem";
+            this.bÁNHÀNGToolStripMenuItem.Size = new System.Drawing.Size(109, 50);
+            this.bÁNHÀNGToolStripMenuItem.Text = "TỔNG QUAN";
+            // 
+            // đỐITÁCToolStripMenuItem
+            // 
+            this.đỐITÁCToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kháchHàngToolStripMenuItem,
+            this.nhàCungToolStripMenuItem});
+            this.đỐITÁCToolStripMenuItem.Name = "đỐITÁCToolStripMenuItem";
+            this.đỐITÁCToolStripMenuItem.Size = new System.Drawing.Size(79, 50);
+            this.đỐITÁCToolStripMenuItem.Text = "ĐỐI TÁC";
+            // 
+            // kháchHàngToolStripMenuItem
+            // 
+            this.kháchHàngToolStripMenuItem.Name = "kháchHàngToolStripMenuItem";
+            this.kháchHàngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.kháchHàngToolStripMenuItem.Text = "Khách hàng";
+            // 
+            // nhàCungToolStripMenuItem
+            // 
+            this.nhàCungToolStripMenuItem.Name = "nhàCungToolStripMenuItem";
+            this.nhàCungToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.nhàCungToolStripMenuItem.Text = "Nhà cung cấp-Đại lý";
+            // 
+            // sẢNPHẢMDỊCHVỤToolStripMenuItem
+            // 
+            this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Name = "sẢNPHẢMDỊCHVỤToolStripMenuItem";
+            this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Size = new System.Drawing.Size(162, 50);
+            this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Text = "SẢN PHẢM-DỊCH VỤ";
+            // 
+            // qUẢNLÍKHOToolStripMenuItem
+            // 
+            this.qUẢNLÍKHOToolStripMenuItem.Name = "qUẢNLÍKHOToolStripMenuItem";
+            this.qUẢNLÍKHOToolStripMenuItem.Size = new System.Drawing.Size(115, 50);
+            this.qUẢNLÍKHOToolStripMenuItem.Text = "QUẢN LÍ KHO";
+            // 
+            // qUẢNLÍTHUCHIToolStripMenuItem
+            // 
+            this.qUẢNLÍTHUCHIToolStripMenuItem.Name = "qUẢNLÍTHUCHIToolStripMenuItem";
+            this.qUẢNLÍTHUCHIToolStripMenuItem.Size = new System.Drawing.Size(141, 50);
+            this.qUẢNLÍTHUCHIToolStripMenuItem.Text = "QUẢN LÍ THU CHI";
+            // 
+            // bÁOCÁOToolStripMenuItem
+            // 
+            this.bÁOCÁOToolStripMenuItem.Name = "bÁOCÁOToolStripMenuItem";
+            this.bÁOCÁOToolStripMenuItem.Size = new System.Drawing.Size(87, 50);
+            this.bÁOCÁOToolStripMenuItem.Text = "BÁO CÁO";
+            // 
+            // nHÂNVIÊNToolStripMenuItem
+            // 
+            this.nHÂNVIÊNToolStripMenuItem.Name = "nHÂNVIÊNToolStripMenuItem";
+            this.nHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(102, 50);
+            this.nHÂNVIÊNToolStripMenuItem.Text = "NHÂN VIÊN";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvNCC);
+            this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Location = new System.Drawing.Point(29, 57);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(910, 616);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            // 
+            // dgvNCC
+            // 
+            this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Madoitac,
+            this.Tendoitac,
+            this.Nhomdoitac,
+            this.SDT,
+            this.Email,
+            this.Diachi,
+            this.Ghichu});
+            this.dgvNCC.Location = new System.Drawing.Point(21, 331);
+            this.dgvNCC.Name = "dgvNCC";
+            this.dgvNCC.RowHeadersWidth = 51;
+            this.dgvNCC.RowTemplate.Height = 24;
+            this.dgvNCC.Size = new System.Drawing.Size(889, 279);
+            this.dgvNCC.TabIndex = 6;
+            // 
+            // Madoitac
+            // 
+            this.Madoitac.DataPropertyName = "Madoitac";
+            this.Madoitac.HeaderText = "Mã đối tác";
+            this.Madoitac.MinimumWidth = 6;
+            this.Madoitac.Name = "Madoitac";
+            this.Madoitac.Width = 125;
+            // 
+            // Tendoitac
+            // 
+            this.Tendoitac.DataPropertyName = "Tendoitac";
+            this.Tendoitac.HeaderText = "Tên đối tác";
+            this.Tendoitac.MinimumWidth = 6;
+            this.Tendoitac.Name = "Tendoitac";
+            this.Tendoitac.Width = 125;
+            // 
+            // Nhomdoitac
+            // 
+            this.Nhomdoitac.HeaderText = "Nhóm đối tác";
+            this.Nhomdoitac.MinimumWidth = 6;
+            this.Nhomdoitac.Name = "Nhomdoitac";
+            this.Nhomdoitac.Width = 125;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số điện thoại";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
+            this.SDT.Width = 125;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.Width = 125;
+            // 
+            // Diachi
+            // 
+            this.Diachi.DataPropertyName = "Diachi";
+            this.Diachi.HeaderText = "Địa chỉ";
+            this.Diachi.MinimumWidth = 6;
+            this.Diachi.Name = "Diachi";
+            this.Diachi.Width = 125;
+            // 
+            // Ghichu
+            // 
+            this.Ghichu.DataPropertyName = "Ghichu";
+            this.Ghichu.HeaderText = "Ghi chú";
+            this.Ghichu.MinimumWidth = 6;
+            this.Ghichu.Name = "Ghichu";
+            this.Ghichu.Width = 125;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtGhichu);
+            this.groupBox3.Controls.Add(this.txtDiachi);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.cboNhomdoitac);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.btnXuat);
+            this.groupBox3.Controls.Add(this.btnXoa);
+            this.groupBox3.Controls.Add(this.btnSua);
+            this.groupBox3.Controls.Add(this.txtEmail);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.txtTendoitac);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.btnThem);
+            this.groupBox3.Controls.Add(this.txtSDT);
+            this.groupBox3.Controls.Add(this.txtMadoitac);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Location = new System.Drawing.Point(21, 103);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(851, 222);
+            this.groupBox3.TabIndex = 5;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Thêm mới đối tác";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(29, 175);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 16);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Ghi chú";
+            // 
+            // txtGhichu
+            // 
+            this.txtGhichu.Location = new System.Drawing.Point(147, 165);
+            this.txtGhichu.Multiline = true;
+            this.txtGhichu.Name = "txtGhichu";
+            this.txtGhichu.Size = new System.Drawing.Size(520, 38);
+            this.txtGhichu.TabIndex = 24;
+            // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(473, 116);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(194, 22);
+            this.txtDiachi.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(355, 122);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 16);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Địa chỉ";
+            // 
+            // cboNhomdoitac
+            // 
+            this.cboNhomdoitac.FormattingEnabled = true;
+            this.cboNhomdoitac.Items.AddRange(new object[] {
+            "Nhà cung cấp",
+            "Giao hàng"});
+            this.cboNhomdoitac.Location = new System.Drawing.Point(147, 114);
+            this.cboNhomdoitac.Name = "cboNhomdoitac";
+            this.cboNhomdoitac.Size = new System.Drawing.Size(180, 24);
+            this.cboNhomdoitac.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 122);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 16);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Nhóm đối tác";
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.Location = new System.Drawing.Point(734, 165);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(89, 26);
+            this.btnXuat.TabIndex = 19;
+            this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(734, 122);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(89, 26);
+            this.btnXoa.TabIndex = 18;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(734, 74);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(89, 26);
+            this.btnSua.TabIndex = 17;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(473, 76);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(194, 22);
+            this.txtEmail.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(355, 82);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 16);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Email";
+            // 
+            // txtTendoitac
+            // 
+            this.txtTendoitac.Location = new System.Drawing.Point(147, 74);
+            this.txtTendoitac.Name = "txtTendoitac";
+            this.txtTendoitac.Size = new System.Drawing.Size(180, 22);
+            this.txtTendoitac.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(29, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 16);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Mã đối tác";
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(734, 26);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(89, 26);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(473, 30);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(194, 22);
+            this.txtSDT.TabIndex = 3;
+            // 
+            // txtMadoitac
+            // 
+            this.txtMadoitac.Location = new System.Drawing.Point(147, 32);
+            this.txtMadoitac.Name = "txtMadoitac";
+            this.txtMadoitac.Size = new System.Drawing.Size(180, 22);
+            this.txtMadoitac.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(355, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Số điện thoại";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tên đối tác";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(21, 21);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(851, 76);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Tìm kiếm đối tác";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(734, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 26);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(473, 30);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(194, 22);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(147, 30);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(180, 22);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(355, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Số điện thoại";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên đối tác";
+            // 
+            // Doitac_NCC
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(976, 677);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.Name = "Doitac_NCC";
+            this.Text = "Doitac_NCC";
+            this.Load += new System.EventHandler(this.Doitac_NCC_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem iMSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bÁNHÀNGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem đỐITÁCToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kháchHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nhàCungToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sẢNPHẢMDỊCHVỤToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem qUẢNLÍKHOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem qUẢNLÍTHUCHIToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bÁOCÁOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nHÂNVIÊNToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvNCC;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtTendoitac;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtMadoitac;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGhichu;
+        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboNhomdoitac;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Madoitac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tendoitac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nhomdoitac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ghichu;
+    }
+}
