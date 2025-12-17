@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Quản_Lí_Kho_Vật_Tư
 {
     public partial class Dangnhap : Form
@@ -17,6 +19,11 @@ namespace Quản_Lí_Kho_Vật_Tư
             InitializeComponent();
         }
 
-        
+        private void linkDangky_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Dangky dk = new Dangky();
+            dk.Show();
+            this.Hide();
+        }
     }
 }

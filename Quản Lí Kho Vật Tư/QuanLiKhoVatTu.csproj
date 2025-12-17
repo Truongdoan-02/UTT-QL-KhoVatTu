@@ -92,5 +92,16 @@
   <ItemGroup>
     <None Include="Resources\logo-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SQLDISTXLib">
+      <Guid>{2BD98547-2D75-4E8C-8B74-1E8E029D746F}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

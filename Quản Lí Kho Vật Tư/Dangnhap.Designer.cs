@@ -31,16 +31,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDangnhap = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.ckHienthimk = new System.Windows.Forms.CheckBox();
+            this.linkDangky = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtMatkhau = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTaikhoan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(219, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 41);
@@ -60,8 +64,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(46, 84);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(46, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 23);
             this.label2.TabIndex = 1;
@@ -72,38 +76,26 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(48, 177);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label3.Location = new System.Drawing.Point(48, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             // 
-            // textBox1
+            // btnDangnhap
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 118);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 41);
-            this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(50, 213);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(354, 44);
-            this.textBox2.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDangnhap.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDangnhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangnhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangnhap.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangnhap.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDangnhap.Location = new System.Drawing.Point(155, 344);
+            this.btnDangnhap.Name = "btnDangnhap";
+            this.btnDangnhap.Size = new System.Drawing.Size(164, 40);
+            this.btnDangnhap.TabIndex = 5;
+            this.btnDangnhap.Text = "Đăng Nhập";
+            this.btnDangnhap.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -115,54 +107,91 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // checkBox1
+            // ckHienthimk
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(314, 280);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 21);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Hiển thị mật khẩu";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckHienthimk.AutoSize = true;
+            this.ckHienthimk.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckHienthimk.Location = new System.Drawing.Point(50, 291);
+            this.ckHienthimk.Name = "ckHienthimk";
+            this.ckHienthimk.Size = new System.Drawing.Size(131, 21);
+            this.ckHienthimk.TabIndex = 7;
+            this.ckHienthimk.Text = "Hiển thị mật khẩu";
+            this.ckHienthimk.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // linkDangky
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(294, 365);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(56, 16);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Đăng ký";
+            this.linkDangky.AutoSize = true;
+            this.linkDangky.Location = new System.Drawing.Point(293, 401);
+            this.linkDangky.Name = "linkDangky";
+            this.linkDangky.Size = new System.Drawing.Size(56, 16);
+            this.linkDangky.TabIndex = 8;
+            this.linkDangky.TabStop = true;
+            this.linkDangky.Text = "Đăng ký";
+            this.linkDangky.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkDangky_LinkClicked);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.linkDangky);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.ckHienthimk);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnDangnhap);
             this.groupBox1.Location = new System.Drawing.Point(413, 29);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(487, 491);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.txtMatkhau);
+            this.panel2.Location = new System.Drawing.Point(52, 235);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(352, 39);
+            this.panel2.TabIndex = 11;
+            // 
+            // txtMatkhau
+            // 
+            this.txtMatkhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatkhau.Location = new System.Drawing.Point(0, -3);
+            this.txtMatkhau.Multiline = true;
+            this.txtMatkhau.Name = "txtMatkhau";
+            this.txtMatkhau.Size = new System.Drawing.Size(352, 41);
+            this.txtMatkhau.TabIndex = 3;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(129, 365);
+            this.label4.Location = new System.Drawing.Point(127, 401);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "Bạn chưa có tài khoản ?";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.Controls.Add(this.txtTaikhoan);
+            this.panel1.Location = new System.Drawing.Point(50, 131);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(352, 39);
+            this.panel1.TabIndex = 13;
+            // 
+            // txtTaikhoan
+            // 
+            this.txtTaikhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaikhoan.Location = new System.Drawing.Point(0, -5);
+            this.txtTaikhoan.Multiline = true;
+            this.txtTaikhoan.Name = "txtTaikhoan";
+            this.txtTaikhoan.Size = new System.Drawing.Size(352, 43);
+            this.txtTaikhoan.TabIndex = 3;
             // 
             // Dangnhap
             // 
@@ -176,6 +205,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -185,13 +218,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDangnhap;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox ckHienthimk;
+        private System.Windows.Forms.LinkLabel linkDangky;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtMatkhau;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtTaikhoan;
     }
 }
