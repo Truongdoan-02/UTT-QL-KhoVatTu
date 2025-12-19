@@ -45,6 +45,30 @@ namespace Quản_Lí_Kho_Vật_Tư
             cmd.Dispose();
             con.Close();
         }
+        void ThemmoiDoitac(string ma, string ten, string nhom,
+                   string sdt, string email, string diachi, string ghichu)
+        {
+            string sql = @"INSERT INTO Doitac_NCC
+                  (Madoitac, Tendoitac, Nhomdoitac, SDT, Email, Diachi, Ghichu)
+                  VALUES (@Ma, @Ten, @Nhom, @SDT, @Email, @Diachi, @Ghichu)";
+
+            using (SqlCommand cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.AddWithValue("@Ma", ma);
+                cmd.Parameters.AddWithValue("@Ten", ten);
+                cmd.Parameters.AddWithValue("@Nhom", nhom);
+                cmd.Parameters.AddWithValue("@SDT", sdt);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Diachi", diachi);
+                cmd.Parameters.AddWithValue("@Ghichu", ghichu);
+
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
 
 
     }

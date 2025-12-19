@@ -77,6 +77,7 @@
             this.txtMadoitac_tk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnNhapExcel = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
@@ -255,13 +256,13 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnNhapExcel);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtGhichu);
             this.groupBox3.Controls.Add(this.txtDiachi);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.cboNhomdoitac);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.btnXuat);
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.txtEmail);
@@ -335,7 +336,7 @@
             // 
             // btnXuat
             // 
-            this.btnXuat.Location = new System.Drawing.Point(734, 165);
+            this.btnXuat.Location = new System.Drawing.Point(734, 83);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(89, 26);
             this.btnXuat.TabIndex = 19;
@@ -445,6 +446,7 @@
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btnTimkiem);
             this.groupBox2.Controls.Add(this.txtSDT_tk);
+            this.groupBox2.Controls.Add(this.btnXuat);
             this.groupBox2.Controls.Add(this.txtMadoitac_tk);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
@@ -493,7 +495,7 @@
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(734, 47);
+            this.btnTimkiem.Location = new System.Drawing.Point(734, 24);
             this.btnTimkiem.Name = "btnTimkiem";
             this.btnTimkiem.Size = new System.Drawing.Size(89, 40);
             this.btnTimkiem.TabIndex = 4;
@@ -532,6 +534,16 @@
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đối tác";
+            // 
+            // btnNhapExcel
+            // 
+            this.btnNhapExcel.Location = new System.Drawing.Point(734, 168);
+            this.btnNhapExcel.Name = "btnNhapExcel";
+            this.btnNhapExcel.Size = new System.Drawing.Size(89, 30);
+            this.btnNhapExcel.TabIndex = 26;
+            this.btnNhapExcel.Text = "Nhập Excel";
+            this.btnNhapExcel.UseVisualStyleBackColor = true;
+            this.btnNhapExcel.Click += new System.EventHandler(this.btnNhapExcel_Click);
             // 
             // Doitac_NCC
             // 
@@ -607,5 +619,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cboNhomdoitac_tk;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnNhapExcel;
     }
 }

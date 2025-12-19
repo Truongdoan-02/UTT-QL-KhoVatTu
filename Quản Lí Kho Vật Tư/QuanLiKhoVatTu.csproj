@@ -35,6 +35,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -46,6 +51,7 @@
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +88,12 @@
     <Compile Include="Doitac_NCC.Designer.cs">
       <DependentUpon>Doitac_NCC.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileExcel.Designer.cs">
+      <DependentUpon>FileExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Thuvien.cs" />
@@ -103,6 +115,9 @@
     <EmbeddedResource Include="Doitac_NCC.resx">
       <DependentUpon>Doitac_NCC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FileExcel.resx">
+      <DependentUpon>FileExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -116,6 +131,7 @@
     <EmbeddedResource Include="Tongquan.resx">
       <DependentUpon>Tongquan.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -130,6 +146,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\FileNhap.xlsx" />
     <None Include="Resources\logo-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>

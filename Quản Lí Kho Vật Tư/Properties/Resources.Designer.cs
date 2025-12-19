@@ -61,6 +61,16 @@ namespace Quản_Lí_Kho_Vật_Tư.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] FileNhap {
+            get {
+                object obj = ResourceManager.GetObject("FileNhap", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo_removebg_preview {

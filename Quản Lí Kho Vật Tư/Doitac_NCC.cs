@@ -246,6 +246,15 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
             Thuvien.con.Close();
             ExportExcel(tb, "DSDoitac");
         }
+
+        private void btnNhapExcel_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = openFileDialog1.FileName;
+                txtFilePath.Text = filePath;
+            }
+        }
     }
     }
 
