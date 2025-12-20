@@ -89,7 +89,14 @@ namespace Quản_Lí_Kho_Vật_Tư
                 return true;   // trống
             return false;      // không trống
         }
-
+        public static bool checkDienThoai(string dt)
+        {
+            return dt.Length == 10 && dt.All(char.IsDigit);
+        }
+        public static bool checkEmail(string email)
+        {
+            return email.EndsWith("@gmail.com");
+        }
     }
 
 

@@ -90,8 +90,17 @@ namespace Quản_Lí_Kho_Vật_Tư
                 MessageBox.Show("Địa chỉ không được để trống");
                 return;
             }
+            if (!Thuvien.checkDienThoai(dt))
+            {
+                txtSDT.Focus();
+                MessageBox.Show("Số điện thoại không đúng...")
+            }
+            if (!Thuvien.checkEmail(mail))
+            {
+                txtEmail.Focus();
+                MessageBox.Show("Email không đúng...")
+            }
 
-            //Kiem tra trung ma
             //B2:Kết nối DB
 
             if (Thuvien.con.State == ConnectionState.Closed)
