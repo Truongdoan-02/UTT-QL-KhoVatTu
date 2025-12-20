@@ -14,9 +14,6 @@ using System.Windows.Interop;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using ex_cel = Microsoft.Office.Interop.Excel;
 namespace Quản_Lí_Kho_Vật_Tư
-    
-
-
 {
     
     public partial class Doitac_NCC : Form
@@ -31,11 +28,15 @@ namespace Quản_Lí_Kho_Vật_Tư
             // B1: Lấy dữ liệu trên các đk đưa vào biến
             string mdt = txtMadoitac.Text.Trim();
             string ht = txtTendoitac.Text.Trim();
-            string nhom = cboNhomdoitac.SelectedItem.ToString().Trim();
+            string nhom;
             string dt = txtSDT.Text.Trim();
             string mail = txtEmail.Text.Trim();
             string dc = txtDiachi.Text.Trim();
             string ghichu=txtGhichu.Text.Trim();
+            if (cboNhomdoitac.SelectedItem == null)
+                nhom = "";
+            else
+                nhom = cboNhomdoitac.SelectedItem.ToString();
             if (Thuvien.checkTrong(mdt))
             {
                 txtMadoitac.Focus();
