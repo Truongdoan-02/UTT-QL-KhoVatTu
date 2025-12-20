@@ -45,7 +45,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             cmd.Dispose();
             con.Close();
         }
-        void ThemmoiDoitac(string ma, string ten, string nhom,
+        public static void ThemmoiDoitac(string ma, string ten, string nhom,
                    string sdt, string email, string diachi, string ghichu)
         {
             string sql = @"INSERT INTO Doitac_NCC
@@ -69,7 +69,36 @@ namespace Quản_Lí_Kho_Vật_Tư
                 con.Close();
             }
         }
+            public  static bool checkTrung(string table, string column, string value)
+        {
+            string sql = $"SELECT COUNT(*) FROM {table} WHERE {column} = @value";
+            
+            if (con.State == ConnectionState.Closed)
+                con.Open();
 
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@value", value);
 
+            int kq = (int)cmd.ExecuteScalar();
+
+            return kq > 0; // true = trùng
+        }
+            public static bool checkTrong(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return true;   // trống
+            return false;      // không trống
+        }
+        public static bool checkDienThoai(string dt)
+        {
+            return dt.Length == 10 && dt.All(char.IsDigit);
+        }
+        public static bool checkEmail(string email)
+        {
+            return email.EndsWith("@gmail.com");
+        }
     }
+
+
 }
+

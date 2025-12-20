@@ -31,6 +31,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             string tt=cboTrangthai.SelectedItem.ToString().Trim();
             string dc = txtDiachi.Text.Trim();
             string cccd = txtCCCD.Text.Trim();
+
             //Kiem tra trung ma
             //B2:Kết nối DB
 
@@ -109,6 +110,48 @@ namespace Quản_Lí_Kho_Vật_Tư
                 "Tenkhachhang like N'%" + ht + "%' and " +
                 "SDT like N'%" + sdt + "%' and " +
                 "Trangthai like N'%" + tt + "%'");
+        }
+
+        private void txtMaKH_TextChanged(object sender, EventArgs e)
+        {
+            string makh=txtMaKH.Text.Trim();
+            if (!Thuvien.checkTrung("Khachhang", "Makhachhang", makh))
+            {
+                lbMaKH.Text = "Mã khách hàng đã tồn tại";
+                lbMaKH.ForeColor=Color.Red;
+            }
+            else
+            {
+                lbMaKH.Text = "";
+            }
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            string sdt = txtSDT.Text.Trim();
+            if (!Thuvien.checkTrung("Khachhang", "SDT", sdt))
+            {
+                lbSDT.Text = "Số điện thoại đã tồn tại";
+                lbSDT.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbSDT.Text = "";
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            string mail = txtEmail.Text.Trim();
+            if (!Thuvien.checkTrung("Khachhang", "Email", mail))
+            {
+                lbEmail.Text = "Email đã tồn tại";
+                lbEmail.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbEmail.Text = "";
+            }
         }
     }
     }

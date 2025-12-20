@@ -11,11 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Interop;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using ex_cel = Microsoft.Office.Interop.Excel;
 namespace Quản_Lí_Kho_Vật_Tư
-    
-
-
 {
     
     public partial class Doitac_NCC : Form
@@ -30,12 +28,70 @@ namespace Quản_Lí_Kho_Vật_Tư
             // B1: Lấy dữ liệu trên các đk đưa vào biến
             string mdt = txtMadoitac.Text.Trim();
             string ht = txtTendoitac.Text.Trim();
-            string nhom = cboNhomdoitac.SelectedItem.ToString().Trim();
+            string nhom;
             string dt = txtSDT.Text.Trim();
             string mail = txtEmail.Text.Trim();
             string dc = txtDiachi.Text.Trim();
             string ghichu=txtGhichu.Text.Trim();
-            //Kiem tra trung ma
+            if (cboNhomdoitac.SelectedItem == null)
+                nhom = "";
+            else
+                nhom = cboNhomdoitac.SelectedItem.ToString();
+            if (Thuvien.checkTrong(mdt))
+            {
+                txtMadoitac.Focus();
+                lbMadoitac.Text = "Mã đối tác không được để trống";
+                lbMadoitac.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(ht))
+            {
+                txtTendoitac.Focus();
+                lbTendoitac.Text = "Tên đối tác không được để trống";
+                lbTendoitac.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(nhom))
+            {
+                cboNhomdoitac.Focus();
+                lbNhomdoitac.Text = "Nhóm đối tác không được để trống";
+                lbNhomdoitac.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(dt))
+            {
+                txtSDT.Focus();
+                lbSDT.Text = "Số điện thoại không được để trống";
+                lbSDT.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(mail))
+            {
+                txtEmail.Focus();
+                lbEmail.Text = "Email không được để trống";
+                lbEmail.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(dc))
+            {
+                txtDiachi.Focus();
+                lbDiachi.Text = "Địa chỉ không được để trống";
+                lbDiachi.ForeColor = Color.Red;
+                return;
+            }
+            if (!Thuvien.checkDienThoai(dt))
+            {
+                txtSDT.Focus();
+                MessageBox.Show("Số điện thoại không đúng...");
+                return;
+            }
+            if (!Thuvien.checkEmail(mail))
+            {
+                txtEmail.Focus();
+                MessageBox.Show("Email không đúng...");
+                return;
+            }
+
             //B2:Kết nối DB
 
             if (Thuvien.con.State == ConnectionState.Closed)
@@ -231,6 +287,7 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
             string nhom = cboNhomdoitac.Text.Trim();
             if (Thuvien.con.State == ConnectionState.Closed)
                 Thuvien.con.Open();
+
             string sql = " Select ROW_NUMBER() over(order by Madoitac) STT, * from Doitac_NCC where Madoitac like '%" + mdt + "%' and " +
                 "Tendoitac like N'%" + ht + "%' and " +
                 "SDT like N'%" + sdt + "%' and " +
@@ -249,12 +306,52 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
 
         private void btnNhapExcel_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            FileExcel file=new FileExcel();
+            file.ShowDialog();
+        }
+
+        private void txtMadoitac_TextChanged(object sender, EventArgs e)
+        {
+            string mdt = txtMadoitac.Text.Trim();
+            if (Thuvien.checkTrung("Doitac_NCC", "Madoitac", mdt))
             {
-                filePath = openFileDialog1.FileName;
-                txtFilePath.Text = filePath;
+                lbMadoitac.Text = "Mã đối tác đã tồn tại.";
+                lbMadoitac.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbMadoitac.Text = "";
             }
         }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            string dt=txtSDT.Text.Trim();
+            if (Thuvien.checkTrung("Doitac_NCC", "SDT", dt))
+            {
+                lbSDT.Text = "Số điện thoại đã tồn tại.";
+                lbSDT.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbSDT.Text = "";
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            string mail = txtEmail.Text.Trim();
+            if (Thuvien.checkTrung("Doitac_NCC", "Email", mail))
+            {
+                lbEmail.Text = "Email đã tồn tại.";
+                lbEmail.ForeColor = Color.Red;
+            }
+            else
+            {
+                lbEmail.Text = "";
+            }
+        }
+
     }
     }
 
