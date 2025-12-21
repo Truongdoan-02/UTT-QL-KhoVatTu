@@ -177,6 +177,7 @@
             // 
             // dgnhanvien
             // 
+            resources.ApplyResources(this.dgnhanvien, "dgnhanvien");
             this.dgnhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgnhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fgmanv,
@@ -186,7 +187,6 @@
             this.dgsdt,
             this.dgemail,
             this.dgdiachi});
-            resources.ApplyResources(this.dgnhanvien, "dgnhanvien");
             this.dgnhanvien.Name = "dgnhanvien";
             this.dgnhanvien.RowTemplate.Height = 24;
             // 
@@ -237,12 +237,12 @@
             // 
             // gbtimkiemnhanvien
             // 
+            resources.ApplyResources(this.gbtimkiemnhanvien, "gbtimkiemnhanvien");
             this.gbtimkiemnhanvien.Controls.Add(this.ibtntimkiemnhanvien);
             this.gbtimkiemnhanvien.Controls.Add(this.txtsdt);
             this.gbtimkiemnhanvien.Controls.Add(this.txtmanv);
             this.gbtimkiemnhanvien.Controls.Add(this.lbsdt);
             this.gbtimkiemnhanvien.Controls.Add(this.lbmanv);
-            resources.ApplyResources(this.gbtimkiemnhanvien, "gbtimkiemnhanvien");
             this.gbtimkiemnhanvien.Name = "gbtimkiemnhanvien";
             this.gbtimkiemnhanvien.TabStop = false;
             // 
@@ -281,39 +281,39 @@
             // 
             // ibtnxuatfile
             // 
+            resources.ApplyResources(this.ibtnxuatfile, "ibtnxuatfile");
             this.ibtnxuatfile.BackColor = System.Drawing.Color.LimeGreen;
             this.ibtnxuatfile.ForeColor = System.Drawing.SystemColors.Control;
             this.ibtnxuatfile.IconChar = FontAwesome.Sharp.IconChar.FileExport;
             this.ibtnxuatfile.IconColor = System.Drawing.Color.White;
             this.ibtnxuatfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnxuatfile.IconSize = 37;
-            resources.ApplyResources(this.ibtnxuatfile, "ibtnxuatfile");
             this.ibtnxuatfile.Name = "ibtnxuatfile";
             this.ibtnxuatfile.UseVisualStyleBackColor = false;
             this.ibtnxuatfile.Click += new System.EventHandler(this.ibtnxuatfile_Click);
             // 
             // icnhapfile
             // 
+            resources.ApplyResources(this.icnhapfile, "icnhapfile");
             this.icnhapfile.BackColor = System.Drawing.Color.LimeGreen;
             this.icnhapfile.ForeColor = System.Drawing.SystemColors.Control;
             this.icnhapfile.IconChar = FontAwesome.Sharp.IconChar.FileImport;
             this.icnhapfile.IconColor = System.Drawing.Color.White;
             this.icnhapfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icnhapfile.IconSize = 37;
-            resources.ApplyResources(this.icnhapfile, "icnhapfile");
             this.icnhapfile.Name = "icnhapfile";
             this.icnhapfile.UseVisualStyleBackColor = false;
             this.icnhapfile.Click += new System.EventHandler(this.icnhapfile_Click);
             // 
             // ibtnnhanvien
             // 
+            resources.ApplyResources(this.ibtnnhanvien, "ibtnnhanvien");
             this.ibtnnhanvien.BackColor = System.Drawing.Color.LimeGreen;
             this.ibtnnhanvien.ForeColor = System.Drawing.SystemColors.Control;
             this.ibtnnhanvien.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.ibtnnhanvien.IconColor = System.Drawing.Color.White;
             this.ibtnnhanvien.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnnhanvien.IconSize = 40;
-            resources.ApplyResources(this.ibtnnhanvien, "ibtnnhanvien");
             this.ibtnnhanvien.Name = "ibtnnhanvien";
             this.ibtnnhanvien.UseVisualStyleBackColor = false;
             this.ibtnnhanvien.Click += new System.EventHandler(this.ibtnnhanvien_Click);

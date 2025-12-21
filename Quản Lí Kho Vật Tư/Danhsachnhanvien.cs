@@ -72,12 +72,18 @@ namespace Quản_Lí_Kho_Vật_Tư
         public void ExportExcel(System.Data.DataTable tb,string sheetname)
         {
             //1.Tao cac doi tuong Excel 
+            // 1. Tạo các đối tượng Excel
             ex_cel.Application oExcel = new ex_cel.Application();
-            ex_cel.Workbooks oBooks;
-            ex_cel.Sheets oSheets;
-            ex_cel.Workbook oBook;
-            ex_cel.Worksheet oSheet;
+            ex_cel.Workbooks oBooks = oExcel.Workbooks;
+            // Sửa dòng dưới: Gán trực tiếp khi Add và ép kiểu tường minh
+            ex_cel.Workbook oBook = (ex_cel.Workbook)oBooks.Add(Type.Missing);
+            ex_cel.Sheets oSheets = oBook.Worksheets;
+            // Sửa dòng dưới: Ép kiểu tường minh để tránh lỗi CS0266
+            ex_cel.Worksheet oSheet = (ex_cel.Worksheet)oBook.ActiveSheet;
+
+            oSheet.Name = sheetname;
             //Tạo mới một Excel WorkBook 
+            oSheet.get_Range("A3", "O3").EntireColumn.AutoFit();
             oExcel.Visible = true;
             oExcel.DisplayAlerts = false;
             oExcel.Application.SheetsInNewWorkbook = 1;
@@ -127,8 +133,44 @@ namespace Quản_Lí_Kho_Vật_Tư
             cl8.Value2 = "Dia chi";
             cl8.ColumnWidth = 55.0;
 
+            // 9.Ngày bắt đầu làm việc
+ex_cel.Range cl9 = oSheet.get_Range("I3", "I3");
+            cl9.Value2 = "Ngày bắt đầu";
+            cl9.ColumnWidth = 20.0;
+
+            // 10. Chức danh
+            ex_cel.Range cl10 = oSheet.get_Range("J3", "J3");
+            cl10.Value2 = "Chức danh";
+            cl10.ColumnWidth = 20.0;
+
+            // 11. Phòng ban
+            ex_cel.Range cl11 = oSheet.get_Range("K3", "K3");
+            cl11.Value2 = "Phòng ban";
+            cl11.ColumnWidth = 20.0;
+
+            // 12. Chi nhánh
+            ex_cel.Range cl12 = oSheet.get_Range("L3", "L3");
+            cl12.Value2 = "Chi nhánh";
+            cl12.ColumnWidth = 20.0;
+
+            // 13. Trạng thái
+            ex_cel.Range cl13 = oSheet.get_Range("M3", "M3");
+            cl13.Value2 = "Trạng thái";
+            cl13.ColumnWidth = 15.0;
+
+            // 14. Mức lương
+            ex_cel.Range cl14 = oSheet.get_Range("N3", "N3");
+            cl14.Value2 = "Mức lương";
+            cl14.ColumnWidth = 15.0;
+
+            // 15. Ghi chú
+            ex_cel.Range cl15 = oSheet.get_Range("O3", "O3");
+            cl15.Value2 = "Ghi chú";
+            cl15.ColumnWidth = 30.0;
+
+
             //Dinh dang hang tieu de
-            ex_cel.Range rowHead = oSheet.get_Range("A3", "H3");
+            ex_cel.Range rowHead = oSheet.get_Range("A3", "O3");
             rowHead.Font.Bold = true;
             // Kẻ viền
             rowHead.Borders.LineStyle = ex_cel.Constants.xlSolid;
@@ -137,7 +179,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             rowHead.HorizontalAlignment = ex_cel.XlHAlign.xlHAlignCenter;
             // Tạo mảng đối tượng để lưu dữ toàn bồ dữ liệu trong DataTable,
             // vì dữ liệu được được gán vào các Cell trong Excel phải thông qua object thuần.
-            object[,] arr = new object[tb.Rows.Count, tb.Columns.Count+1];
+            object[,] arr = new object[tb.Rows.Count,15];
             //Chuyển dữ liệu từ DataTable vào mảng đối tượng
             for (int r = 0; r < tb.Rows.Count; r++)
             {
@@ -177,7 +219,13 @@ namespace Quản_Lí_Kho_Vật_Tư
             ex_cel.Range cl_ngs = oSheet.get_Range("E4","E" + (tb.Rows.Count + 3).ToString());
             cl_ngs.Columns.NumberFormat = "dd/mm/yyyy";
             oExcel.Visible = true;
-
+            //Định dạng ngày bắt đầu
+            ex_cel.Range cl_ngbd = oSheet.get_Range("I4", "I" + (tb.Rows.Count + 3).ToString());
+            cl_ngs.Columns.NumberFormat = "dd/mm/yyyy";
+            oExcel.Visible = true;
+            // Định dạng cột N (Mức lương)
+            ex_cel.Range cl_luong = oSheet.get_Range("N4", "N" + (tb.Rows.Count + 3).ToString());
+            cl_luong.Columns.NumberFormat = "#,##0";
         }
         private void ibtnxuatfile_Click(object sender, EventArgs e)
         {
