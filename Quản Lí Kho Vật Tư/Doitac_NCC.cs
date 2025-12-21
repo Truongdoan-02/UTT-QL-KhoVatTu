@@ -169,6 +169,10 @@ namespace Quản_Lí_Kho_Vật_Tư
                 "SDT like N'%" + sdt + "%' and " +
                 "Nhomdoitac like N'%" + nhom + "%'");
         }
+<<<<<<< HEAD
+
+       
+=======
         public void ExportExcel(DataTable tb, string sheetname)
 {
     //Tạo các đối tượng Excel
@@ -253,6 +257,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                 arr[r, c] = dr[c];
 
         }
+>>>>>>> 3370d386ffa0e87dd8e0eabe8c71fb947b21d1ca
     }
     //Thiết lập vùng điền dữ liệu
     int rowStart = 4;

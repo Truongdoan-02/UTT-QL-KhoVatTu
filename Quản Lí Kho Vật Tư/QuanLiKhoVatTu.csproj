@@ -76,6 +76,12 @@
     <Compile Include="Dangnhap.Designer.cs">
       <DependentUpon>Dangnhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Danhsachnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Danhsachnhanvien.Designer.cs">
+      <DependentUpon>Danhsachnhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doitac_Khachhang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,12 @@
     <Compile Include="Quanlikho.Designer.cs">
       <DependentUpon>Quanlikho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Themnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Themnhanvien.Designer.cs">
+      <DependentUpon>Themnhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thuvien.cs" />
     <Compile Include="Tongquan.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dangnhap.resx">
       <DependentUpon>Dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danhsachnhanvien.dje.resx">
+      <DependentUpon>Danhsachnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Danhsachnhanvien.resx">
+      <DependentUpon>Danhsachnhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doitac_Khachhang.resx">
       <DependentUpon>Doitac_Khachhang.cs</DependentUpon>
@@ -141,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Quanlikho.resx">
       <DependentUpon>Quanlikho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Themnhanvien.resx">
+      <DependentUpon>Themnhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tongquan.resx">
       <DependentUpon>Tongquan.cs</DependentUpon>

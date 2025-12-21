@@ -19,6 +19,9 @@ namespace Quản_Lí_Kho_Vật_Tư
             InitializeComponent();
         }
 
+<<<<<<< HEAD
+        
+=======
         private void btnThem_Click(object sender, EventArgs e)
         {
             
@@ -153,6 +156,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                 lbEmail.Text = "";
             }
         }
+>>>>>>> 3370d386ffa0e87dd8e0eabe8c71fb947b21d1ca
     }
     }
 
