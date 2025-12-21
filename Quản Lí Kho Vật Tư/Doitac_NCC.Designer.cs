@@ -39,7 +39,8 @@
             this.qUẢNLÍTHUCHIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁOCÁOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.dgvNCC = new System.Windows.Forms.DataGridView();
             this.Madoitac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tendoitac = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,14 +49,21 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbNhomdoitac = new System.Windows.Forms.Label();
+            this.lbDiachi = new System.Windows.Forms.Label();
+            this.lbTendoitac = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbSDT = new System.Windows.Forms.Label();
+            this.lbMadoitac = new System.Windows.Forms.Label();
+            this.btnNhapExcel = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtGhichu = new System.Windows.Forms.TextBox();
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboNhomdoitac = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -67,6 +75,7 @@
             this.txtMadoitac = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cboNhomdoitac_tk = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,13 +83,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnTimkiem = new System.Windows.Forms.Button();
             this.txtSDT_tk = new System.Windows.Forms.TextBox();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.txtMadoitac_tk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
+            this.panel3.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,7 +112,7 @@
             this.nHÂNVIÊNToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(976, 54);
+            this.menuStrip1.Size = new System.Drawing.Size(1284, 54);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -167,19 +180,30 @@
             this.nHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(102, 50);
             this.nHÂNVIÊNToolStripMenuItem.Text = "NHÂN VIÊN";
             // 
-            // groupBox1
+            // panel1
             // 
-            this.groupBox1.Controls.Add(this.dgvNCC);
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(29, 57);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(910, 752);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1284, 872);
+            this.panel1.TabIndex = 28;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dgvNCC);
+            this.panel4.Location = new System.Drawing.Point(64, 426);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(904, 326);
+            this.panel4.TabIndex = 8;
             // 
             // dgvNCC
             // 
+            this.dgvNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Madoitac,
@@ -189,11 +213,12 @@
             this.Email,
             this.Diachi,
             this.Ghichu});
-            this.dgvNCC.Location = new System.Drawing.Point(21, 387);
+            this.dgvNCC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvNCC.Location = new System.Drawing.Point(0, 0);
             this.dgvNCC.Name = "dgvNCC";
             this.dgvNCC.RowHeadersWidth = 51;
             this.dgvNCC.RowTemplate.Height = 24;
-            this.dgvNCC.Size = new System.Drawing.Size(889, 359);
+            this.dgvNCC.Size = new System.Drawing.Size(904, 326);
             this.dgvNCC.TabIndex = 6;
             this.dgvNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNCC_CellClick);
             // 
@@ -203,7 +228,6 @@
             this.Madoitac.HeaderText = "Mã đối tác";
             this.Madoitac.MinimumWidth = 6;
             this.Madoitac.Name = "Madoitac";
-            this.Madoitac.Width = 125;
             // 
             // Tendoitac
             // 
@@ -211,7 +235,6 @@
             this.Tendoitac.HeaderText = "Tên đối tác";
             this.Tendoitac.MinimumWidth = 6;
             this.Tendoitac.Name = "Tendoitac";
-            this.Tendoitac.Width = 125;
             // 
             // Nhomdoitac
             // 
@@ -219,7 +242,6 @@
             this.Nhomdoitac.HeaderText = "Nhóm đối tác";
             this.Nhomdoitac.MinimumWidth = 6;
             this.Nhomdoitac.Name = "Nhomdoitac";
-            this.Nhomdoitac.Width = 125;
             // 
             // SDT
             // 
@@ -227,7 +249,6 @@
             this.SDT.HeaderText = "Số điện thoại";
             this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
-            this.SDT.Width = 125;
             // 
             // Email
             // 
@@ -235,7 +256,6 @@
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 6;
             this.Email.Name = "Email";
-            this.Email.Width = 125;
             // 
             // Diachi
             // 
@@ -243,7 +263,6 @@
             this.Diachi.HeaderText = "Địa chỉ";
             this.Diachi.MinimumWidth = 6;
             this.Diachi.Name = "Diachi";
-            this.Diachi.Width = 125;
             // 
             // Ghichu
             // 
@@ -251,17 +270,31 @@
             this.Ghichu.HeaderText = "Ghi chú";
             this.Ghichu.MinimumWidth = 6;
             this.Ghichu.Name = "Ghichu";
-            this.Ghichu.Width = 125;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.groupBox3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 127);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1284, 227);
+            this.panel3.TabIndex = 7;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lbNhomdoitac);
+            this.groupBox3.Controls.Add(this.lbDiachi);
+            this.groupBox3.Controls.Add(this.lbTendoitac);
+            this.groupBox3.Controls.Add(this.lbEmail);
+            this.groupBox3.Controls.Add(this.lbSDT);
+            this.groupBox3.Controls.Add(this.lbMadoitac);
+            this.groupBox3.Controls.Add(this.btnNhapExcel);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtGhichu);
             this.groupBox3.Controls.Add(this.txtDiachi);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.cboNhomdoitac);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.btnXuat);
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.txtEmail);
@@ -273,12 +306,64 @@
             this.groupBox3.Controls.Add(this.txtMadoitac);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(21, 148);
+            this.groupBox3.Location = new System.Drawing.Point(115, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(851, 222);
+            this.groupBox3.Size = new System.Drawing.Size(945, 222);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thêm mới đối tác";
+            // 
+            // lbNhomdoitac
+            // 
+            this.lbNhomdoitac.Location = new System.Drawing.Point(144, 157);
+            this.lbNhomdoitac.Name = "lbNhomdoitac";
+            this.lbNhomdoitac.Size = new System.Drawing.Size(212, 23);
+            this.lbNhomdoitac.TabIndex = 33;
+            // 
+            // lbDiachi
+            // 
+            this.lbDiachi.Location = new System.Drawing.Point(470, 152);
+            this.lbDiachi.Name = "lbDiachi";
+            this.lbDiachi.Size = new System.Drawing.Size(212, 23);
+            this.lbDiachi.TabIndex = 32;
+            // 
+            // lbTendoitac
+            // 
+            this.lbTendoitac.Location = new System.Drawing.Point(144, 106);
+            this.lbTendoitac.Name = "lbTendoitac";
+            this.lbTendoitac.Size = new System.Drawing.Size(212, 23);
+            this.lbTendoitac.TabIndex = 31;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.Location = new System.Drawing.Point(470, 101);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(212, 23);
+            this.lbEmail.TabIndex = 29;
+            // 
+            // lbSDT
+            // 
+            this.lbSDT.Location = new System.Drawing.Point(470, 50);
+            this.lbSDT.Name = "lbSDT";
+            this.lbSDT.Size = new System.Drawing.Size(212, 23);
+            this.lbSDT.TabIndex = 28;
+            // 
+            // lbMadoitac
+            // 
+            this.lbMadoitac.Location = new System.Drawing.Point(144, 55);
+            this.lbMadoitac.Name = "lbMadoitac";
+            this.lbMadoitac.Size = new System.Drawing.Size(216, 23);
+            this.lbMadoitac.TabIndex = 27;
+            // 
+            // btnNhapExcel
+            // 
+            this.btnNhapExcel.Location = new System.Drawing.Point(734, 168);
+            this.btnNhapExcel.Name = "btnNhapExcel";
+            this.btnNhapExcel.Size = new System.Drawing.Size(89, 30);
+            this.btnNhapExcel.TabIndex = 26;
+            this.btnNhapExcel.Text = "Nhập Excel";
+            this.btnNhapExcel.UseVisualStyleBackColor = true;
+            this.btnNhapExcel.Click += new System.EventHandler(this.btnNhapExcel_Click);
             // 
             // label9
             // 
@@ -291,7 +376,7 @@
             // 
             // txtGhichu
             // 
-            this.txtGhichu.Location = new System.Drawing.Point(147, 165);
+            this.txtGhichu.Location = new System.Drawing.Point(147, 178);
             this.txtGhichu.Multiline = true;
             this.txtGhichu.Name = "txtGhichu";
             this.txtGhichu.Size = new System.Drawing.Size(520, 38);
@@ -299,7 +384,7 @@
             // 
             // txtDiachi
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(473, 116);
+            this.txtDiachi.Location = new System.Drawing.Point(473, 130);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(194, 22);
             this.txtDiachi.TabIndex = 23;
@@ -307,7 +392,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(355, 122);
+            this.label7.Location = new System.Drawing.Point(373, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 22;
@@ -319,20 +404,21 @@
             this.cboNhomdoitac.Items.AddRange(new object[] {
             "Nhà cung cấp",
             "Giao hàng"});
-            this.cboNhomdoitac.Location = new System.Drawing.Point(147, 114);
+            this.cboNhomdoitac.Location = new System.Drawing.Point(147, 130);
             this.cboNhomdoitac.Name = "cboNhomdoitac";
-            this.cboNhomdoitac.Size = new System.Drawing.Size(180, 24);
+            this.cboNhomdoitac.Size = new System.Drawing.Size(202, 24);
             this.cboNhomdoitac.TabIndex = 21;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 122);
+            this.label6.Location = new System.Drawing.Point(29, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 16);
             this.label6.TabIndex = 20;
             this.label6.Text = "Nhóm đối tác";
             // 
+<<<<<<< HEAD
             // btnXuat
             // 
             this.btnXuat.Location = new System.Drawing.Point(734, 165);
@@ -343,6 +429,8 @@
             this.btnXuat.UseVisualStyleBackColor = true;
  
             // 
+=======
+>>>>>>> 3370d386ffa0e87dd8e0eabe8c71fb947b21d1ca
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(734, 122);
@@ -369,11 +457,12 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(194, 22);
             this.txtEmail.TabIndex = 13;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(355, 82);
+            this.label8.Location = new System.Drawing.Point(373, 82);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 16);
             this.label8.TabIndex = 11;
@@ -381,9 +470,9 @@
             // 
             // txtTendoitac
             // 
-            this.txtTendoitac.Location = new System.Drawing.Point(147, 74);
+            this.txtTendoitac.Location = new System.Drawing.Point(147, 81);
             this.txtTendoitac.Name = "txtTendoitac";
-            this.txtTendoitac.Size = new System.Drawing.Size(180, 22);
+            this.txtTendoitac.Size = new System.Drawing.Size(202, 22);
             this.txtTendoitac.TabIndex = 6;
             // 
             // label5
@@ -411,13 +500,15 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(194, 22);
             this.txtSDT.TabIndex = 3;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // txtMadoitac
             // 
             this.txtMadoitac.Location = new System.Drawing.Point(147, 32);
             this.txtMadoitac.Name = "txtMadoitac";
-            this.txtMadoitac.Size = new System.Drawing.Size(180, 22);
+            this.txtMadoitac.Size = new System.Drawing.Size(202, 22);
             this.txtMadoitac.TabIndex = 2;
+            this.txtMadoitac.TextChanged += new System.EventHandler(this.txtMadoitac_TextChanged);
             // 
             // label3
             // 
@@ -437,20 +528,33 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên đối tác";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1284, 127);
+            this.panel2.TabIndex = 5;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.cboNhomdoitac_tk);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtTendoitac_tk);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.btnTimkiem);
             this.groupBox2.Controls.Add(this.txtSDT_tk);
+            this.groupBox2.Controls.Add(this.btnXuat);
             this.groupBox2.Controls.Add(this.txtMadoitac_tk);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(21, 21);
+            this.groupBox2.Location = new System.Drawing.Point(12, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(851, 121);
+            this.groupBox2.Size = new System.Drawing.Size(1210, 102);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm đối tác";
@@ -459,17 +563,31 @@
             // 
             this.cboNhomdoitac_tk.FormattingEnabled = true;
             this.cboNhomdoitac_tk.Items.AddRange(new object[] {
+<<<<<<< HEAD
             "Nhà cung cấp",
             "Giao hàng"});
             this.cboNhomdoitac_tk.Location = new System.Drawing.Point(473, 77);
             this.cboNhomdoitac_tk.Name = "cboNhomdoitac_tk";
             this.cboNhomdoitac_tk.Size = new System.Drawing.Size(194, 24);
+=======
+            "Giao hàng",
+            "Nhà cung cấp"});
+            this.cboNhomdoitac_tk.Location = new System.Drawing.Point(103, 63);
+            this.cboNhomdoitac_tk.Name = "cboNhomdoitac_tk";
+            this.cboNhomdoitac_tk.Size = new System.Drawing.Size(261, 24);
+>>>>>>> 3370d386ffa0e87dd8e0eabe8c71fb947b21d1ca
             this.cboNhomdoitac_tk.TabIndex = 26;
             // 
             // label11
             // 
+<<<<<<< HEAD
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(354, 83);
+=======
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 66);
+>>>>>>> 3370d386ffa0e87dd8e0eabe8c71fb947b21d1ca
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(86, 16);
             this.label11.TabIndex = 26;
@@ -477,25 +595,29 @@
             // 
             // txtTendoitac_tk
             // 
-            this.txtTendoitac_tk.Location = new System.Drawing.Point(147, 77);
+            this.txtTendoitac_tk.Location = new System.Drawing.Point(742, 21);
+            this.txtTendoitac_tk.Multiline = true;
             this.txtTendoitac_tk.Name = "txtTendoitac_tk";
-            this.txtTendoitac_tk.Size = new System.Drawing.Size(180, 22);
+            this.txtTendoitac_tk.Size = new System.Drawing.Size(281, 28);
             this.txtTendoitac_tk.TabIndex = 27;
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 36);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label10.Location = new System.Drawing.Point(19, 27);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 16);
+            this.label10.Size = new System.Drawing.Size(77, 18);
             this.label10.TabIndex = 26;
             this.label10.Text = "Mã đối tác";
             // 
             // btnTimkiem
             // 
-            this.btnTimkiem.Location = new System.Drawing.Point(734, 47);
+            this.btnTimkiem.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnTimkiem.Location = new System.Drawing.Point(1029, 18);
             this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(89, 40);
+            this.btnTimkiem.Size = new System.Drawing.Size(89, 81);
             this.btnTimkiem.TabIndex = 4;
             this.btnTimkiem.Text = "Tìm kiếm";
             this.btnTimkiem.UseVisualStyleBackColor = true;
@@ -503,22 +625,37 @@
             // 
             // txtSDT_tk
             // 
-            this.txtSDT_tk.Location = new System.Drawing.Point(473, 30);
+            this.txtSDT_tk.Location = new System.Drawing.Point(742, 63);
+            this.txtSDT_tk.Multiline = true;
             this.txtSDT_tk.Name = "txtSDT_tk";
-            this.txtSDT_tk.Size = new System.Drawing.Size(194, 22);
+            this.txtSDT_tk.Size = new System.Drawing.Size(281, 33);
             this.txtSDT_tk.TabIndex = 3;
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnXuat.Location = new System.Drawing.Point(1118, 18);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(89, 81);
+            this.btnXuat.TabIndex = 19;
+            this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // txtMadoitac_tk
             // 
-            this.txtMadoitac_tk.Location = new System.Drawing.Point(147, 30);
+            this.txtMadoitac_tk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMadoitac_tk.Location = new System.Drawing.Point(103, 18);
+            this.txtMadoitac_tk.Multiline = true;
             this.txtMadoitac_tk.Name = "txtMadoitac_tk";
-            this.txtMadoitac_tk.Size = new System.Drawing.Size(180, 22);
+            this.txtMadoitac_tk.Size = new System.Drawing.Size(261, 31);
             this.txtMadoitac_tk.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(355, 36);
+            this.label2.Location = new System.Drawing.Point(628, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 1;
@@ -527,7 +664,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 80);
+            this.label1.Location = new System.Drawing.Point(639, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 0;
@@ -537,18 +674,22 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 800);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1284, 926);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Doitac_NCC";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doitac_NCC";
             this.Load += new System.EventHandler(this.Doitac_NCC_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -569,10 +710,31 @@
         private System.Windows.Forms.ToolStripMenuItem qUẢNLÍTHUCHIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bÁOCÁOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nHÂNVIÊNToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView dgvNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Madoitac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tendoitac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nhomdoitac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ghichu;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnXuat;
+        private System.Windows.Forms.Label lbNhomdoitac;
+        private System.Windows.Forms.Label lbDiachi;
+        private System.Windows.Forms.Label lbTendoitac;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Label lbSDT;
+        private System.Windows.Forms.Label lbMadoitac;
+        private System.Windows.Forms.Button btnNhapExcel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtGhichu;
+        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cboNhomdoitac;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.TextBox txtEmail;
@@ -584,28 +746,17 @@
         private System.Windows.Forms.TextBox txtMadoitac;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cboNhomdoitac_tk;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtTendoitac_tk;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.TextBox txtSDT_tk;
+        private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.TextBox txtMadoitac_tk;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtGhichu;
-        private System.Windows.Forms.TextBox txtDiachi;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboNhomdoitac;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Madoitac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tendoitac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nhomdoitac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ghichu;
-        private System.Windows.Forms.TextBox txtTendoitac_tk;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cboNhomdoitac_tk;
-        private System.Windows.Forms.Label label11;
     }
 }

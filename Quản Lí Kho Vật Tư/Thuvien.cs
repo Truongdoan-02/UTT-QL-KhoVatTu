@@ -7,12 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Interop;
+using System.Windows.Markup;
+using System.Windows.Media;
 
 namespace Quản_Lí_Kho_Vật_Tư
 {
     internal class Thuvien
     {
+<<<<<<< HEAD
         public static SqlConnection con = new SqlConnection("Data Source=ComputerTungha;Initial Catalog=QL_KhoVatTu;Integrated Security=True");
+=======
+        public static SqlConnection con = new SqlConnection(@"Data Source=MSI\xuan;Initial Catalog = QL_KhoVatTu; Integrated Security = True; Encrypt=True;TrustServerCertificate=True");
+        //public static SqlConnection con = new SqlConnection("Data Source=TRUONGDOAN\\TRUONGDOAN;Initial Catalog=QL_KhoVatTu;User ID=sa;Password=Truong2022005!;Encrypt=True;TrustServerCertificate=True");
+>>>>>>> 3370d386ffa0e87dd8e0eabe8c71fb947b21d1ca
         public static void load_KH(DataGridView dgv,string sql)
         {
             //B1:Kết nối DB
@@ -45,7 +53,60 @@ namespace Quản_Lí_Kho_Vật_Tư
             cmd.Dispose();
             con.Close();
         }
+        public static void ThemmoiDoitac(string ma, string ten, string nhom,
+                   string sdt, string email, string diachi, string ghichu)
+        {
+            string sql = @"INSERT INTO Doitac_NCC
+                  (Madoitac, Tendoitac, Nhomdoitac, SDT, Email, Diachi, Ghichu)
+                  VALUES (@Ma, @Ten, @Nhom, @SDT, @Email, @Diachi, @Ghichu)";
 
+            using (SqlCommand cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.AddWithValue("@Ma", ma);
+                cmd.Parameters.AddWithValue("@Ten", ten);
+                cmd.Parameters.AddWithValue("@Nhom", nhom);
+                cmd.Parameters.AddWithValue("@SDT", sdt);
+                cmd.Parameters.AddWithValue("@Email", email);
+                cmd.Parameters.AddWithValue("@Diachi", diachi);
+                cmd.Parameters.AddWithValue("@Ghichu", ghichu);
 
+                if (con.State == ConnectionState.Closed)
+                    con.Open();
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+            public  static bool checkTrung(string table, string column, string value)
+        {
+            string sql = $"SELECT COUNT(*) FROM {table} WHERE {column} = @value";
+            
+            if (con.State == ConnectionState.Closed)
+                con.Open();
+
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@value", value);
+
+            int kq = (int)cmd.ExecuteScalar();
+
+            return kq > 0; // true = trùng
+        }
+            public static bool checkTrong(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return true;   // trống
+            return false;      // không trống
+        }
+        public static bool checkDienThoai(string dt)
+        {
+            return dt.Length == 10 && dt.All(char.IsDigit);
+        }
+        public static bool checkEmail(string email)
+        {
+            return email.EndsWith("@gmail.com");
+        }
     }
+
+
 }
+
