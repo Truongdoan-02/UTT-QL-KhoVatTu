@@ -53,5 +53,20 @@ namespace Quản_Lí_Kho_Vật_Tư
 
             f.Show();
         }
+
+        private void qUẢNLÍKHOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();   // Ẩn Trang chủ
+
+            Quanlikho f = new Quanlikho();
+
+            // Khi Form mới đóng → đóng Trang chủ
+            f.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            f.Show();
+        }
     }
 }
