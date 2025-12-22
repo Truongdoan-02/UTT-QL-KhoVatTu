@@ -18,7 +18,6 @@ namespace Quản_Lí_Kho_Vật_Tư
         {
             InitializeComponent();
         }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             
