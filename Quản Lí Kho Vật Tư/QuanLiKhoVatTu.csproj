@@ -113,6 +113,12 @@
     <Compile Include="Quanlikho.Designer.cs">
       <DependentUpon>Quanlikho.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sanphamdichvu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanphamdichvu.Designer.cs">
+      <DependentUpon>Sanphamdichvu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Themnhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="Quanlikho.resx">
       <DependentUpon>Quanlikho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanphamdichvu.resx">
+      <DependentUpon>Sanphamdichvu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Themnhanvien.resx">
       <DependentUpon>Themnhanvien.cs</DependentUpon>
