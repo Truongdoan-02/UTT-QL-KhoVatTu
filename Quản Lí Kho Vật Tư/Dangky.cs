@@ -14,7 +14,7 @@ namespace Quản_Lí_Kho_Vật_Tư
 {
     public partial class Dangky : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=TRUONGDOAN\\TRUONGDOAN;Initial Catalog=QL_KhoVatTu;User ID=sa;Password=Truong2022005!;Encrypt=True;TrustServerCertificate=True");
+        SqlConnection con = new SqlConnection("Data Source=ANHTU\\ANHTU;Initial Catalog=QL_KhoVatTu;User ID=sa;Password=Truong2022005!;Encrypt=True;TrustServerCertificate=True");
         public Dangky()
         {
             InitializeComponent();
