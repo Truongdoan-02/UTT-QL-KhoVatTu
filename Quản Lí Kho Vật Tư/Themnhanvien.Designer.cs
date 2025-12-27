@@ -47,6 +47,7 @@
             this.lbmanv = new System.Windows.Forms.Label();
             this.btnboqua = new System.Windows.Forms.Button();
             this.panelbottom = new System.Windows.Forms.Panel();
+            this.ibtnluu = new FontAwesome.Sharp.IconButton();
             this.panelfill = new System.Windows.Forms.Panel();
             this.gbcongviec = new System.Windows.Forms.GroupBox();
             this.txtluong = new System.Windows.Forms.TextBox();
@@ -68,7 +69,6 @@
             this.paneltop = new System.Windows.Forms.FlowLayoutPanel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ibtnluu = new FontAwesome.Sharp.IconButton();
             this.iconSplitButton1 = new FontAwesome.Sharp.IconSplitButton();
             this.gbthemnv.SuspendLayout();
             this.panelbottom.SuspendLayout();
@@ -252,6 +252,24 @@
             this.panelbottom.Name = "panelbottom";
             this.panelbottom.Size = new System.Drawing.Size(800, 100);
             this.panelbottom.TabIndex = 5;
+            // 
+            // ibtnluu
+            // 
+            this.ibtnluu.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.ibtnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.ibtnluu.ForeColor = System.Drawing.SystemColors.Control;
+            this.ibtnluu.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.ibtnluu.IconColor = System.Drawing.Color.White;
+            this.ibtnluu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnluu.IconSize = 40;
+            this.ibtnluu.Location = new System.Drawing.Point(364, 21);
+            this.ibtnluu.Name = "ibtnluu";
+            this.ibtnluu.Size = new System.Drawing.Size(129, 52);
+            this.ibtnluu.TabIndex = 3;
+            this.ibtnluu.Text = "Lưu";
+            this.ibtnluu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ibtnluu.UseVisualStyleBackColor = false;
+            this.ibtnluu.Click += new System.EventHandler(this.ibtnluu_Click);
             // 
             // panelfill
             // 
@@ -463,24 +481,6 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // ibtnluu
-            // 
-            this.ibtnluu.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.ibtnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.ibtnluu.ForeColor = System.Drawing.SystemColors.Control;
-            this.ibtnluu.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.ibtnluu.IconColor = System.Drawing.Color.White;
-            this.ibtnluu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnluu.IconSize = 40;
-            this.ibtnluu.Location = new System.Drawing.Point(364, 21);
-            this.ibtnluu.Name = "ibtnluu";
-            this.ibtnluu.Size = new System.Drawing.Size(129, 52);
-            this.ibtnluu.TabIndex = 3;
-            this.ibtnluu.Text = "Lưu";
-            this.ibtnluu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ibtnluu.UseVisualStyleBackColor = false;
-            this.ibtnluu.Click += new System.EventHandler(this.ibtnluu_Click);
             // 
             // iconSplitButton1
             // 

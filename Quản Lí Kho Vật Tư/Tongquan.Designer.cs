@@ -180,6 +180,7 @@
             this.lịchLàmViệcToolStripMenuItem.Name = "lịchLàmViệcToolStripMenuItem";
             this.lịchLàmViệcToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
             this.lịchLàmViệcToolStripMenuItem.Text = "Lịch làm việc";
+            this.lịchLàmViệcToolStripMenuItem.Click += new System.EventHandler(this.lịchLàmViệcToolStripMenuItem_Click);
             // 
             // bảngChấmCôngToolStripMenuItem
             // 

@@ -102,5 +102,15 @@ namespace Quản_Lí_Kho_Vật_Tư
 
             f.Show();
         }
+
+        private void lịchLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();   // Ẩn Trang chủ
+
+            Lichlamviec f = new Lichlamviec();
+            f.ShowDialog();
+
+            this.Show();
+        }
     }
 }
