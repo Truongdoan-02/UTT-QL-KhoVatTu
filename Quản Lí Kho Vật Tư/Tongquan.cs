@@ -53,5 +53,54 @@ namespace Quản_Lí_Kho_Vật_Tư
 
             f.Show();
         }
+
+        
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();   // Ẩn Trang chủ
+
+            Danhsachnhanvien f = new Danhsachnhanvien();
+
+            // Khi Form mới đóng → đóng Trang chủ
+            f.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            f.Show();
+        }
+
+        
+
+        private void qUẢNLÍKHOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();   // Ẩn Trang chủ
+
+            Quanlikho f = new Quanlikho();
+
+            // Khi Form mới đóng → đóng Trang chủ
+            f.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            f.Show();
+        }
+
+        private void sẢNPHẢMDỊCHVỤToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();   // Ẩn Trang chủ
+
+            Sanphamdichvu f = new Sanphamdichvu();
+
+            // Khi Form mới đóng → đóng Trang chủ
+            f.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            f.Show();
+        }
     }
 }
