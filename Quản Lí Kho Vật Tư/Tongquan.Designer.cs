@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.iMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁNHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +42,10 @@
             this.qUẢNLÍTHUCHIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁOCÁOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhSáchNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lịchLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bảngChấmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bảngLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -64,10 +68,6 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.danhSáchNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lịchLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bảngChấmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bảngLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -136,12 +136,14 @@
             this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Name = "sẢNPHẢMDỊCHVỤToolStripMenuItem";
             this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Size = new System.Drawing.Size(162, 50);
             this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Text = "SẢN PHẢM-DỊCH VỤ";
+            this.sẢNPHẢMDỊCHVỤToolStripMenuItem.Click += new System.EventHandler(this.sẢNPHẢMDỊCHVỤToolStripMenuItem_Click);
             // 
             // qUẢNLÍKHOToolStripMenuItem
             // 
             this.qUẢNLÍKHOToolStripMenuItem.Name = "qUẢNLÍKHOToolStripMenuItem";
             this.qUẢNLÍKHOToolStripMenuItem.Size = new System.Drawing.Size(115, 50);
             this.qUẢNLÍKHOToolStripMenuItem.Text = "QUẢN LÍ KHO";
+            this.qUẢNLÍKHOToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÍKHOToolStripMenuItem_Click);
             // 
             // qUẢNLÍTHUCHIToolStripMenuItem
             // 
@@ -165,6 +167,31 @@
             this.nHÂNVIÊNToolStripMenuItem.Name = "nHÂNVIÊNToolStripMenuItem";
             this.nHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(102, 50);
             this.nHÂNVIÊNToolStripMenuItem.Text = "NHÂN VIÊN";
+            // 
+            // danhSáchNhânViênToolStripMenuItem
+            // 
+            this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
+            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.danhSáchNhânViênToolStripMenuItem.Text = "Danh sách nhân viên";
+            this.danhSáchNhânViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchNhânViênToolStripMenuItem_Click);
+            // 
+            // lịchLàmViệcToolStripMenuItem
+            // 
+            this.lịchLàmViệcToolStripMenuItem.Name = "lịchLàmViệcToolStripMenuItem";
+            this.lịchLàmViệcToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.lịchLàmViệcToolStripMenuItem.Text = "Lịch làm việc";
+            // 
+            // bảngChấmCôngToolStripMenuItem
+            // 
+            this.bảngChấmCôngToolStripMenuItem.Name = "bảngChấmCôngToolStripMenuItem";
+            this.bảngChấmCôngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.bảngChấmCôngToolStripMenuItem.Text = "Bảng chấm công";
+            // 
+            // bảngLươngToolStripMenuItem
+            // 
+            this.bảngLươngToolStripMenuItem.Name = "bảngLươngToolStripMenuItem";
+            this.bảngLươngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
+            this.bảngLươngToolStripMenuItem.Text = "Bảng lương";
             // 
             // dateTimePicker1
             // 
@@ -332,20 +359,20 @@
             // 
             // chart1
             // 
-            chartArea2.AxisX.Title = "Ngày";
-            chartArea2.AxisX2.Maximum = 20D;
-            chartArea2.AxisX2.Minimum = 0D;
-            chartArea2.AxisY.Title = "Doanh thu";
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.AxisX.Title = "Ngày";
+            chartArea1.AxisX2.Maximum = 20D;
+            chartArea1.AxisX2.Minimum = 0D;
+            chartArea1.AxisY.Title = "Doanh thu";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(115, 533);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(695, 311);
             this.chart1.TabIndex = 16;
             this.chart1.Text = "chart1";
@@ -358,30 +385,6 @@
             this.groupBox5.TabIndex = 18;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Doanh thu theo ngày";
-            // 
-            // danhSáchNhânViênToolStripMenuItem
-            // 
-            this.danhSáchNhânViênToolStripMenuItem.Name = "danhSáchNhânViênToolStripMenuItem";
-            this.danhSáchNhânViênToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.danhSáchNhânViênToolStripMenuItem.Text = "Danh sách nhân viên";
-            // 
-            // lịchLàmViệcToolStripMenuItem
-            // 
-            this.lịchLàmViệcToolStripMenuItem.Name = "lịchLàmViệcToolStripMenuItem";
-            this.lịchLàmViệcToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.lịchLàmViệcToolStripMenuItem.Text = "Lịch làm việc";
-            // 
-            // bảngChấmCôngToolStripMenuItem
-            // 
-            this.bảngChấmCôngToolStripMenuItem.Name = "bảngChấmCôngToolStripMenuItem";
-            this.bảngChấmCôngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.bảngChấmCôngToolStripMenuItem.Text = "Bảng chấm công";
-            // 
-            // bảngLươngToolStripMenuItem
-            // 
-            this.bảngLươngToolStripMenuItem.Name = "bảngLươngToolStripMenuItem";
-            this.bảngLươngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.bảngLươngToolStripMenuItem.Text = "Bảng lương";
             // 
             // Tongquan
             // 
@@ -448,4 +451,3 @@
         private System.Windows.Forms.ToolStripMenuItem bảngLươngToolStripMenuItem;
     }
 }
-
