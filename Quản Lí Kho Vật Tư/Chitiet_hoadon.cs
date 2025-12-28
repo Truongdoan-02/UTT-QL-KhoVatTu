@@ -68,5 +68,10 @@ namespace Quản_Lí_Kho_Vật_Tư
             dgvCThoadon.Columns["DonGia"].DefaultCellStyle.Format = "N0";
             dgvCThoadon.Columns["ThanhTien"].DefaultCellStyle.Format = "N0";
         }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

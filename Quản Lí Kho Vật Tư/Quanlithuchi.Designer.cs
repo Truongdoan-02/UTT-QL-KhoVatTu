@@ -49,9 +49,9 @@
             this.cboLoaiHD = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnTimkiem = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoadon)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -62,11 +62,11 @@
             // dgvHoadon
             // 
             this.dgvHoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHoadon.Location = new System.Drawing.Point(58, 175);
+            this.dgvHoadon.Location = new System.Drawing.Point(56, 220);
             this.dgvHoadon.Name = "dgvHoadon";
             this.dgvHoadon.RowHeadersWidth = 51;
             this.dgvHoadon.RowTemplate.Height = 24;
-            this.dgvHoadon.Size = new System.Drawing.Size(1344, 506);
+            this.dgvHoadon.Size = new System.Drawing.Size(1307, 461);
             this.dgvHoadon.TabIndex = 0;
             this.dgvHoadon.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoadon_CellDoubleClick);
             // 
@@ -224,19 +224,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(103, 57);
+            this.panel1.Location = new System.Drawing.Point(105, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 101);
             this.panel1.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(329, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Đến ";
             // 
             // groupBox1
             // 
@@ -247,12 +238,12 @@
             this.groupBox1.Controls.Add(this.dtpDenNgay);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpTuNgay);
-            this.groupBox1.Location = new System.Drawing.Point(20, 11);
+            this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1030, 87);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Tìm kiếm thông tin";
             // 
             // label3
             // 
@@ -262,6 +253,15 @@
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Loại HD";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(329, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Đến ";
             // 
             // btnTimkiem
             // 

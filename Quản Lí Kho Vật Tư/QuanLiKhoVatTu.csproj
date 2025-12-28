@@ -199,6 +199,9 @@
     <EmbeddedResource Include="Quanlikho.resx">
       <DependentUpon>Quanlikho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Quanlithuchi.resx">
+      <DependentUpon>Quanlithuchi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sanphamdichvu.resx">
       <DependentUpon>Sanphamdichvu.cs</DependentUpon>
     </EmbeddedResource>
