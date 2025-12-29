@@ -30,9 +30,6 @@ namespace Quản_Lí_Kho_Vật_Tư
 
         private void Danhsachnhanvien_Load(object sender, EventArgs e)
         {
-            //Goi ham load_Kh tu lop thu vien
-            //dgnhanvien la ten dat o DataGridView
-            //nhanvien la ten bang dat trong sql
             string sql = "select * from Danhsachnhanvien";
             Thuvien.load_KH(dgnhanvien, sql);
         }
@@ -40,15 +37,13 @@ namespace Quản_Lí_Kho_Vật_Tư
         private void ibtnnhanvien_Click(object sender, EventArgs e)
         {
             Themnhanvien tnv = new Themnhanvien();
-            tnv.ShowDialog();//Hien thi form nhap lieu duoi dang hop thoai
-                             //Sau khi dong form nhap lieu,load lai bang de thay nhan vien moi duoc them
+            tnv.ShowDialog();
             string sql = "select * from Danhsachnhanvien";
             Thuvien.load_KH(dgnhanvien, sql);
         }
 
         private void ibtntimkiemnhanvien_Click(object sender, EventArgs e)
         {
-            //1.Kiem tra nguoi dung ch nhap gi thi load toan bo bang
             if (string.IsNullOrEmpty(txtmanv.Text))
             {
                 string sqlFull = "SELECT *FROM Danhsachnhanvien";
@@ -57,11 +52,9 @@ namespace Quản_Lí_Kho_Vật_Tư
             }
             string Manv = txtmanv.Text;
             string Sdt = txtsdt.Text;
-            //2.Tao cau lenh sql tim kiem theo ma nhan vien (dung like de tim kiem gtan dung)
             string sqlSearch = "SELECT *FROM Danhsachnhanvien WHERE Manv LIKE '%" + txtmanv.Text + "%' AND Sdt LIKE '%" + txtsdt.Text + "%' ";
             try
             {
-                //3.Goi ham load_kh de hien thi ket qua loc len dgv
                 Thuvien.load_KH(dgnhanvien, sqlSearch);
             }
             catch (Exception ex)
@@ -93,7 +86,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             oSheet = (ex_cel.Worksheet)oSheets.get_Item(1);
             oSheet.Name = sheetname;
             //2.Tao tieu de lon cho bang 
-            ex_cel.Range head = oSheet.get_Range("A1", "H1");//Den cot thu H vi co 8 cot
+            ex_cel.Range head = oSheet.get_Range("A1", "H1");
             head.MergeCells = true;
             head.Value2 = "DANH SACH NHAN VIEN";
             head.Font.Bold = true;

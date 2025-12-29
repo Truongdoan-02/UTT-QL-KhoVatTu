@@ -33,8 +33,8 @@
             this.ngay = new System.Windows.Forms.DateTimePicker();
             this.ca = new System.Windows.Forms.ComboBox();
             this.nhanvien = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.xoa = new System.Windows.Forms.Button();
+            this.sua = new System.Windows.Forms.Button();
             this.them = new System.Windows.Forms.Button();
             this.ghichu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,13 +43,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ngaytk = new System.Windows.Forms.DateTimePicker();
+            this.txttimkiem = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.thongke = new System.Windows.Forms.Button();
+            this.thoat = new System.Windows.Forms.Button();
+            this.timkiem = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.xuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,14 +65,15 @@
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(843, 328);
             this.dgv.TabIndex = 2;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ngay);
             this.groupBox1.Controls.Add(this.ca);
             this.groupBox1.Controls.Add(this.nhanvien);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.xoa);
+            this.groupBox1.Controls.Add(this.sua);
             this.groupBox1.Controls.Add(this.them);
             this.groupBox1.Controls.Add(this.ghichu);
             this.groupBox1.Controls.Add(this.label5);
@@ -116,31 +118,33 @@
             this.nhanvien.TabIndex = 11;
             this.nhanvien.Text = "Chọn nhân viên";
             // 
-            // button3
+            // xoa
             // 
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Bisque;
-            this.button3.Location = new System.Drawing.Point(280, 343);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 44);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = false;
+            this.xoa.AutoSize = true;
+            this.xoa.BackColor = System.Drawing.Color.Gray;
+            this.xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xoa.ForeColor = System.Drawing.Color.Bisque;
+            this.xoa.Location = new System.Drawing.Point(280, 343);
+            this.xoa.Name = "xoa";
+            this.xoa.Size = new System.Drawing.Size(89, 44);
+            this.xoa.TabIndex = 10;
+            this.xoa.Text = "Xóa";
+            this.xoa.UseVisualStyleBackColor = false;
+            this.xoa.Click += new System.EventHandler(this.xoa_Click);
             // 
-            // button2
+            // sua
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Bisque;
-            this.button2.Location = new System.Drawing.Point(161, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 44);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Sửa ";
-            this.button2.UseVisualStyleBackColor = false;
+            this.sua.AutoSize = true;
+            this.sua.BackColor = System.Drawing.Color.Gray;
+            this.sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sua.ForeColor = System.Drawing.Color.Bisque;
+            this.sua.Location = new System.Drawing.Point(161, 343);
+            this.sua.Name = "sua";
+            this.sua.Size = new System.Drawing.Size(89, 44);
+            this.sua.TabIndex = 9;
+            this.sua.Text = "Sửa ";
+            this.sua.UseVisualStyleBackColor = false;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // them
             // 
@@ -179,7 +183,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(6, 191);
+            this.label4.Location = new System.Drawing.Point(9, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 22);
             this.label4.TabIndex = 3;
@@ -190,7 +194,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(6, 266);
+            this.label3.Location = new System.Drawing.Point(9, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 22);
             this.label3.TabIndex = 2;
@@ -210,8 +214,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.ngaytk);
+            this.groupBox2.Controls.Add(this.txttimkiem);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(49, 120);
@@ -230,68 +234,71 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Ngày";
             // 
-            // dateTimePicker1
+            // ngaytk
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(218, 70);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowCheckBox = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(318, 27);
-            this.dateTimePicker1.TabIndex = 15;
+            this.ngaytk.Location = new System.Drawing.Point(241, 70);
+            this.ngaytk.Name = "ngaytk";
+            this.ngaytk.ShowCheckBox = true;
+            this.ngaytk.Size = new System.Drawing.Size(268, 27);
+            this.ngaytk.TabIndex = 15;
             // 
-            // textBox1
+            // txttimkiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(218, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(318, 27);
-            this.textBox1.TabIndex = 7;
+            this.txttimkiem.Location = new System.Drawing.Point(241, 25);
+            this.txttimkiem.Name = "txttimkiem";
+            this.txttimkiem.Size = new System.Drawing.Size(268, 27);
+            this.txttimkiem.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(101, 32);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 20);
+            this.label6.Size = new System.Drawing.Size(120, 20);
             this.label6.TabIndex = 6;
-            this.label6.Text = "Nhân viên";
+            this.label6.Text = "Mã nhân viên";
             // 
-            // button5
+            // thongke
             // 
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.Gray;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Bisque;
-            this.button5.Location = new System.Drawing.Point(1067, 27);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(89, 44);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Thống kê";
-            this.button5.UseVisualStyleBackColor = false;
+            this.thongke.AutoSize = true;
+            this.thongke.BackColor = System.Drawing.Color.Gray;
+            this.thongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thongke.ForeColor = System.Drawing.Color.Bisque;
+            this.thongke.Location = new System.Drawing.Point(951, 27);
+            this.thongke.Name = "thongke";
+            this.thongke.Size = new System.Drawing.Size(89, 44);
+            this.thongke.TabIndex = 13;
+            this.thongke.Text = "Thống kê";
+            this.thongke.UseVisualStyleBackColor = false;
+            this.thongke.Click += new System.EventHandler(this.thongke_Click);
             // 
-            // button4
+            // thoat
             // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Bisque;
-            this.button4.Location = new System.Drawing.Point(1196, 27);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 44);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Thoát";
-            this.button4.UseVisualStyleBackColor = false;
+            this.thoat.AutoSize = true;
+            this.thoat.BackColor = System.Drawing.Color.Gray;
+            this.thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thoat.ForeColor = System.Drawing.Color.Bisque;
+            this.thoat.Location = new System.Drawing.Point(1196, 27);
+            this.thoat.Name = "thoat";
+            this.thoat.Size = new System.Drawing.Size(89, 44);
+            this.thoat.TabIndex = 14;
+            this.thoat.Text = "Thoát";
+            this.thoat.UseVisualStyleBackColor = false;
+            this.thoat.Click += new System.EventHandler(this.thoat_Click);
             // 
-            // button6
+            // timkiem
             // 
-            this.button6.AutoSize = true;
-            this.button6.BackColor = System.Drawing.Color.Gray;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Bisque;
-            this.button6.Location = new System.Drawing.Point(626, 128);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(122, 44);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = false;
+            this.timkiem.AutoSize = true;
+            this.timkiem.BackColor = System.Drawing.Color.Gray;
+            this.timkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timkiem.ForeColor = System.Drawing.Color.Bisque;
+            this.timkiem.Location = new System.Drawing.Point(626, 128);
+            this.timkiem.Name = "timkiem";
+            this.timkiem.Size = new System.Drawing.Size(122, 44);
+            this.timkiem.TabIndex = 15;
+            this.timkiem.Text = "Tìm kiếm";
+            this.timkiem.UseVisualStyleBackColor = false;
+            this.timkiem.Click += new System.EventHandler(this.timkiem_Click);
             // 
             // button7
             // 
@@ -305,16 +312,32 @@
             this.button7.TabIndex = 16;
             this.button7.Text = "Hiển thị tất cả";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // xuat
+            // 
+            this.xuat.AutoSize = true;
+            this.xuat.BackColor = System.Drawing.Color.Gray;
+            this.xuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xuat.ForeColor = System.Drawing.Color.Bisque;
+            this.xuat.Location = new System.Drawing.Point(1077, 27);
+            this.xuat.Name = "xuat";
+            this.xuat.Size = new System.Drawing.Size(96, 44);
+            this.xuat.TabIndex = 17;
+            this.xuat.Text = "Xuất file";
+            this.xuat.UseVisualStyleBackColor = false;
+            this.xuat.Click += new System.EventHandler(this.xuat_Click);
             // 
             // Lichlamviec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1298, 684);
+            this.Controls.Add(this.xuat);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.timkiem);
+            this.Controls.Add(this.thoat);
+            this.Controls.Add(this.thongke);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
@@ -336,8 +359,8 @@
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox nhanvien;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button xoa;
+        private System.Windows.Forms.Button sua;
         private System.Windows.Forms.Button them;
         private System.Windows.Forms.TextBox ghichu;
         private System.Windows.Forms.Label label5;
@@ -345,15 +368,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txttimkiem;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button thongke;
+        private System.Windows.Forms.Button thoat;
         private System.Windows.Forms.ComboBox ca;
         private System.Windows.Forms.DateTimePicker ngay;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker ngaytk;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button timkiem;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button xuat;
     }
 }
