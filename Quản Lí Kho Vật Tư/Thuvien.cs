@@ -146,8 +146,8 @@ namespace Quản_Lí_Kho_Vật_Tư
 
                 cmd.ExecuteNonQuery();
                 con.Close();
-            
-        }
+
+            }
         }
         public static void ThemmoiNhanvien(string Manv, string Hoten, string Gioitinh, string Ngaysinh, string Sdt, string Email, string Diachi, string Ngaybatdaulamviec, string Chucdanh, string Phongban, string Chinhanh, string Trangthai, string Mucluong, string Ghichu)
         {
@@ -209,9 +209,27 @@ namespace Quản_Lí_Kho_Vật_Tư
             con.Close();
         }
 
+
+        public static DataTable LayDuLieu(string sql)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                if (con.State == ConnectionState.Closed) con.Open();
+
+                SqlDataAdapter da = new SqlDataAdapter(sql, con);
+                da.Fill(dt);
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thư viện: " + ex.Message);
+            }
+            return dt;
+        }
     }
 }
-
 
 
 

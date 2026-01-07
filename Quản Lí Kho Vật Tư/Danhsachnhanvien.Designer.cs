@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Danhsachnhanvien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.iMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁNHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,15 +50,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgnhanvien = new System.Windows.Forms.DataGridView();
-            this.gbtimkiemnhanvien = new System.Windows.Forms.GroupBox();
-            this.ibtntimkiemnhanvien = new FontAwesome.Sharp.IconButton();
-            this.txtsdt = new System.Windows.Forms.TextBox();
-            this.txtmanv = new System.Windows.Forms.TextBox();
-            this.lbsdt = new System.Windows.Forms.Label();
-            this.lbmanv = new System.Windows.Forms.Label();
-            this.ibtnxuatfile = new FontAwesome.Sharp.IconButton();
-            this.icnhapfile = new FontAwesome.Sharp.IconButton();
-            this.ibtnnhanvien = new FontAwesome.Sharp.IconButton();
             this.fgmanv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gdhoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dggioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +64,16 @@
             this.dgtrangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgmucluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbtimkiemnhanvien = new System.Windows.Forms.GroupBox();
             this.ibtnxoa = new FontAwesome.Sharp.IconButton();
+            this.ibtntimkiemnhanvien = new FontAwesome.Sharp.IconButton();
+            this.txtsdt = new System.Windows.Forms.TextBox();
+            this.txtmanv = new System.Windows.Forms.TextBox();
+            this.lbsdt = new System.Windows.Forms.Label();
+            this.lbmanv = new System.Windows.Forms.Label();
+            this.ibtnxuatfile = new FontAwesome.Sharp.IconButton();
+            this.icnhapfile = new FontAwesome.Sharp.IconButton();
+            this.ibtnnhanvien = new FontAwesome.Sharp.IconButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgnhanvien)).BeginInit();
             this.gbtimkiemnhanvien.SuspendLayout();
@@ -207,6 +207,93 @@
             this.dgnhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgnhanvien_CellContentClick);
             this.dgnhanvien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgnhanvien_CellDoubleClick);
             // 
+            // fgmanv
+            // 
+            this.fgmanv.DataPropertyName = "Manv";
+            resources.ApplyResources(this.fgmanv, "fgmanv");
+            this.fgmanv.Name = "fgmanv";
+            // 
+            // gdhoten
+            // 
+            this.gdhoten.DataPropertyName = "Hoten";
+            resources.ApplyResources(this.gdhoten, "gdhoten");
+            this.gdhoten.Name = "gdhoten";
+            // 
+            // dggioitinh
+            // 
+            this.dggioitinh.DataPropertyName = "Gioitinh";
+            resources.ApplyResources(this.dggioitinh, "dggioitinh");
+            this.dggioitinh.Name = "dggioitinh";
+            // 
+            // dgngaysinh
+            // 
+            this.dgngaysinh.DataPropertyName = "Ngaysinh";
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dgngaysinh.DefaultCellStyle = dataGridViewCellStyle3;
+            resources.ApplyResources(this.dgngaysinh, "dgngaysinh");
+            this.dgngaysinh.Name = "dgngaysinh";
+            // 
+            // dgsdt
+            // 
+            this.dgsdt.DataPropertyName = "Sdt";
+            resources.ApplyResources(this.dgsdt, "dgsdt");
+            this.dgsdt.Name = "dgsdt";
+            // 
+            // dgemail
+            // 
+            this.dgemail.DataPropertyName = "Email";
+            resources.ApplyResources(this.dgemail, "dgemail");
+            this.dgemail.Name = "dgemail";
+            // 
+            // dgdiachi
+            // 
+            this.dgdiachi.DataPropertyName = "Diachi";
+            resources.ApplyResources(this.dgdiachi, "dgdiachi");
+            this.dgdiachi.Name = "dgdiachi";
+            // 
+            // dgngaybatdaulamviec
+            // 
+            this.dgngaybatdaulamviec.DataPropertyName = "Ngaybatdaulamviec";
+            resources.ApplyResources(this.dgngaybatdaulamviec, "dgngaybatdaulamviec");
+            this.dgngaybatdaulamviec.Name = "dgngaybatdaulamviec";
+            // 
+            // dgchucdanh
+            // 
+            this.dgchucdanh.DataPropertyName = "Chucdanh";
+            resources.ApplyResources(this.dgchucdanh, "dgchucdanh");
+            this.dgchucdanh.Name = "dgchucdanh";
+            // 
+            // dgphongban
+            // 
+            this.dgphongban.DataPropertyName = "Phongban";
+            resources.ApplyResources(this.dgphongban, "dgphongban");
+            this.dgphongban.Name = "dgphongban";
+            // 
+            // dgchinhanh
+            // 
+            this.dgchinhanh.DataPropertyName = "Chinhanh";
+            resources.ApplyResources(this.dgchinhanh, "dgchinhanh");
+            this.dgchinhanh.Name = "dgchinhanh";
+            // 
+            // dgtrangthai
+            // 
+            this.dgtrangthai.DataPropertyName = "Trangthai";
+            resources.ApplyResources(this.dgtrangthai, "dgtrangthai");
+            this.dgtrangthai.Name = "dgtrangthai";
+            // 
+            // dgmucluong
+            // 
+            this.dgmucluong.DataPropertyName = "Mucluong";
+            resources.ApplyResources(this.dgmucluong, "dgmucluong");
+            this.dgmucluong.Name = "dgmucluong";
+            // 
+            // dgghichu
+            // 
+            this.dgghichu.DataPropertyName = "Ghichu";
+            resources.ApplyResources(this.dgghichu, "dgghichu");
+            this.dgghichu.Name = "dgghichu";
+            // 
             // gbtimkiemnhanvien
             // 
             resources.ApplyResources(this.gbtimkiemnhanvien, "gbtimkiemnhanvien");
@@ -218,6 +305,20 @@
             this.gbtimkiemnhanvien.Controls.Add(this.lbmanv);
             this.gbtimkiemnhanvien.Name = "gbtimkiemnhanvien";
             this.gbtimkiemnhanvien.TabStop = false;
+            // 
+            // ibtnxoa
+            // 
+            this.ibtnxoa.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ibtnxoa.ForeColor = System.Drawing.SystemColors.Control;
+            this.ibtnxoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.ibtnxoa.IconColor = System.Drawing.Color.White;
+            this.ibtnxoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ibtnxoa.IconSize = 35;
+            resources.ApplyResources(this.ibtnxoa, "ibtnxoa");
+            this.ibtnxoa.Name = "ibtnxoa";
+            this.ibtnxoa.UseVisualStyleBackColor = false;
+            this.ibtnxoa.UseWaitCursor = true;
+            this.ibtnxoa.Click += new System.EventHandler(this.ibtnxoa_Click);
             // 
             // ibtntimkiemnhanvien
             // 
@@ -290,107 +391,6 @@
             this.ibtnnhanvien.Name = "ibtnnhanvien";
             this.ibtnnhanvien.UseVisualStyleBackColor = false;
             this.ibtnnhanvien.Click += new System.EventHandler(this.ibtnnhanvien_Click);
-            // 
-            // fgmanv
-            // 
-            this.fgmanv.DataPropertyName = "Manv";
-            resources.ApplyResources(this.fgmanv, "fgmanv");
-            this.fgmanv.Name = "fgmanv";
-            // 
-            // gdhoten
-            // 
-            this.gdhoten.DataPropertyName = "Hoten";
-            resources.ApplyResources(this.gdhoten, "gdhoten");
-            this.gdhoten.Name = "gdhoten";
-            // 
-            // dggioitinh
-            // 
-            this.dggioitinh.DataPropertyName = "Gioitinh";
-            resources.ApplyResources(this.dggioitinh, "dggioitinh");
-            this.dggioitinh.Name = "dggioitinh";
-            // 
-            // dgngaysinh
-            // 
-            this.dgngaysinh.DataPropertyName = "Ngaysinh";
-            dataGridViewCellStyle7.Format = "d";
-            dataGridViewCellStyle7.NullValue = null;
-            this.dgngaysinh.DefaultCellStyle = dataGridViewCellStyle7;
-            resources.ApplyResources(this.dgngaysinh, "dgngaysinh");
-            this.dgngaysinh.Name = "dgngaysinh";
-            // 
-            // dgsdt
-            // 
-            this.dgsdt.DataPropertyName = "Sdt";
-            resources.ApplyResources(this.dgsdt, "dgsdt");
-            this.dgsdt.Name = "dgsdt";
-            // 
-            // dgemail
-            // 
-            this.dgemail.DataPropertyName = "Email";
-            resources.ApplyResources(this.dgemail, "dgemail");
-            this.dgemail.Name = "dgemail";
-            // 
-            // dgdiachi
-            // 
-            this.dgdiachi.DataPropertyName = "Diachi";
-            resources.ApplyResources(this.dgdiachi, "dgdiachi");
-            this.dgdiachi.Name = "dgdiachi";
-            // 
-            // dgngaybatdaulamviec
-            // 
-            this.dgngaybatdaulamviec.DataPropertyName = "Ngaybatdaulamviec";
-            resources.ApplyResources(this.dgngaybatdaulamviec, "dgngaybatdaulamviec");
-            this.dgngaybatdaulamviec.Name = "dgngaybatdaulamviec";
-            // 
-            // dgchucdanh
-            // 
-            this.dgchucdanh.DataPropertyName = "Chucdanh";
-            resources.ApplyResources(this.dgchucdanh, "dgchucdanh");
-            this.dgchucdanh.Name = "dgchucdanh";
-            // 
-            // dgphongban
-            // 
-            this.dgphongban.DataPropertyName = "Phongban";
-            resources.ApplyResources(this.dgphongban, "dgphongban");
-            this.dgphongban.Name = "dgphongban";
-            // 
-            // dgchinhanh
-            // 
-            this.dgchinhanh.DataPropertyName = "Chinhanh";
-            resources.ApplyResources(this.dgchinhanh, "dgchinhanh");
-            this.dgchinhanh.Name = "dgchinhanh";
-            // 
-            // dgtrangthai
-            // 
-            this.dgtrangthai.DataPropertyName = "Trangthai";
-            resources.ApplyResources(this.dgtrangthai, "dgtrangthai");
-            this.dgtrangthai.Name = "dgtrangthai";
-            // 
-            // dgmucluong
-            // 
-            this.dgmucluong.DataPropertyName = "Mucluong";
-            resources.ApplyResources(this.dgmucluong, "dgmucluong");
-            this.dgmucluong.Name = "dgmucluong";
-            // 
-            // dgghichu
-            // 
-            this.dgghichu.DataPropertyName = "Ghichu";
-            resources.ApplyResources(this.dgghichu, "dgghichu");
-            this.dgghichu.Name = "dgghichu";
-            // 
-            // ibtnxoa
-            // 
-            this.ibtnxoa.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ibtnxoa.ForeColor = System.Drawing.SystemColors.Control;
-            this.ibtnxoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.ibtnxoa.IconColor = System.Drawing.Color.White;
-            this.ibtnxoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ibtnxoa.IconSize = 35;
-            resources.ApplyResources(this.ibtnxoa, "ibtnxoa");
-            this.ibtnxoa.Name = "ibtnxoa";
-            this.ibtnxoa.UseVisualStyleBackColor = false;
-            this.ibtnxoa.UseWaitCursor = true;
-            this.ibtnxoa.Click += new System.EventHandler(this.ibtnxoa_Click);
             // 
             // Danhsachnhanvien
             // 

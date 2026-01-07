@@ -64,6 +64,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chitiet_hoadon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chitiet_hoadon.Designer.cs">
+      <DependentUpon>Chitiet_hoadon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dangky.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     <Compile Include="FileExcel_NV.Designer.cs">
       <DependentUpon>FileExcel_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lichlamviec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lichlamviec.Designer.cs">
+      <DependentUpon>Lichlamviec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nhapkho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,12 @@
     <Compile Include="Sanphamdichvu.Designer.cs">
       <DependentUpon>Sanphamdichvu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Quanlithuchi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quanlithuchi.Designer.cs">
+      <DependentUpon>Quanlithuchi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Themnhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +168,9 @@
     <Compile Include="Tongquan.Designer.cs">
       <DependentUpon>Tongquan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Chitiet_hoadon.resx">
+      <DependentUpon>Chitiet_hoadon.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Xuatkho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +204,9 @@
     <EmbeddedResource Include="FileExcel_NV.resx">
       <DependentUpon>FileExcel_NV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lichlamviec.resx">
+      <DependentUpon>Lichlamviec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nhapkho.resx">
       <DependentUpon>Nhapkho.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +222,9 @@
     </Compile>
     <EmbeddedResource Include="Quanlikho.resx">
       <DependentUpon>Quanlikho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quanlithuchi.resx">
+      <DependentUpon>Quanlithuchi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sanphamdichvu.resx">
       <DependentUpon>Sanphamdichvu.cs</DependentUpon>

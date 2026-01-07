@@ -56,14 +56,9 @@ namespace Quản_Lí_Kho_Vật_Tư
             this.Hide();   // Ẩn Trang chủ
 
             Danhsachnhanvien f = new Danhsachnhanvien();
+            f.ShowDialog();
 
-            // Khi Form mới đóng → đóng Trang chủ
-            f.FormClosed += (s, args) =>
-            {
-                this.Close();
-            };
-
-            f.Show();
+            this.Show();
         }
 
         
@@ -128,6 +123,16 @@ namespace Quản_Lí_Kho_Vật_Tư
             };
 
             f.Show();
+        }
+
+        private void lịchLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();   
+
+            Lichlamviec f = new Lichlamviec();
+            f.ShowDialog();
+
+            this.Show();
         }
     }
 }

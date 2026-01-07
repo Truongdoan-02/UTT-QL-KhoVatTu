@@ -47,8 +47,6 @@
             this.nHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchLàmViệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bảngChấmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bảngLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -187,9 +185,7 @@
             // 
             this.nHÂNVIÊNToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.danhSáchNhânViênToolStripMenuItem,
-            this.lịchLàmViệcToolStripMenuItem,
-            this.bảngChấmCôngToolStripMenuItem,
-            this.bảngLươngToolStripMenuItem});
+            this.lịchLàmViệcToolStripMenuItem});
             this.nHÂNVIÊNToolStripMenuItem.Name = "nHÂNVIÊNToolStripMenuItem";
             this.nHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(102, 50);
             this.nHÂNVIÊNToolStripMenuItem.Text = "NHÂN VIÊN";
@@ -206,18 +202,7 @@
             this.lịchLàmViệcToolStripMenuItem.Name = "lịchLàmViệcToolStripMenuItem";
             this.lịchLàmViệcToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
             this.lịchLàmViệcToolStripMenuItem.Text = "Lịch làm việc";
-            // 
-            // bảngChấmCôngToolStripMenuItem
-            // 
-            this.bảngChấmCôngToolStripMenuItem.Name = "bảngChấmCôngToolStripMenuItem";
-            this.bảngChấmCôngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.bảngChấmCôngToolStripMenuItem.Text = "Bảng chấm công";
-            // 
-            // bảngLươngToolStripMenuItem
-            // 
-            this.bảngLươngToolStripMenuItem.Name = "bảngLươngToolStripMenuItem";
-            this.bảngLươngToolStripMenuItem.Size = new System.Drawing.Size(227, 26);
-            this.bảngLươngToolStripMenuItem.Text = "Bảng lương";
+            this.lịchLàmViệcToolStripMenuItem.Click += new System.EventHandler(this.lịchLàmViệcToolStripMenuItem_Click);
             // 
             // dateTimePicker1
             // 
