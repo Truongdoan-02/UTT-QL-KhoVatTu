@@ -332,7 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 684);
+            this.ClientSize = new System.Drawing.Size(1332, 684);
             this.Controls.Add(this.xuat);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.timkiem);

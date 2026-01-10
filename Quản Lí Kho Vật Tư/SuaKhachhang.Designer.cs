@@ -1,6 +1,6 @@
 ﻿namespace Quản_Lí_Kho_Vật_Tư
 {
-    partial class ThemKhachhang
+    partial class SuaKhachhang
     {
         /// <summary>
         /// Required designer variable.
@@ -30,21 +30,13 @@
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new FontAwesome.Sharp.IconButton();
-            this.btnThem = new FontAwesome.Sharp.IconButton();
-            this.lbGioitinh = new System.Windows.Forms.Label();
-            this.lbCCCD = new System.Windows.Forms.Label();
+            this.btnSua = new FontAwesome.Sharp.IconButton();
             this.txtCCCD = new System.Windows.Forms.TextBox();
-            this.lbTenKH = new System.Windows.Forms.Label();
             this.txtTenKH = new System.Windows.Forms.TextBox();
-            this.lbMaKH = new System.Windows.Forms.Label();
             this.cboGioitinh = new System.Windows.Forms.ComboBox();
             this.txtMaKH = new System.Windows.Forms.TextBox();
-            this.lbTrangthai = new System.Windows.Forms.Label();
-            this.lbDiachi = new System.Windows.Forms.Label();
             this.txtDiachi = new System.Windows.Forms.TextBox();
-            this.lbEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lbSDT = new System.Windows.Forms.Label();
             this.cboTrangthai = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,21 +53,13 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnHuy);
-            this.groupBox3.Controls.Add(this.btnThem);
-            this.groupBox3.Controls.Add(this.lbGioitinh);
-            this.groupBox3.Controls.Add(this.lbCCCD);
+            this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.txtCCCD);
-            this.groupBox3.Controls.Add(this.lbTenKH);
             this.groupBox3.Controls.Add(this.txtTenKH);
-            this.groupBox3.Controls.Add(this.lbMaKH);
             this.groupBox3.Controls.Add(this.cboGioitinh);
             this.groupBox3.Controls.Add(this.txtMaKH);
-            this.groupBox3.Controls.Add(this.lbTrangthai);
-            this.groupBox3.Controls.Add(this.lbDiachi);
             this.groupBox3.Controls.Add(this.txtDiachi);
-            this.groupBox3.Controls.Add(this.lbEmail);
             this.groupBox3.Controls.Add(this.txtEmail);
-            this.groupBox3.Controls.Add(this.lbSDT);
             this.groupBox3.Controls.Add(this.cboTrangthai);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
@@ -87,12 +71,12 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 21);
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1191, 526);
-            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Thêm mới khách hàng";
+            this.groupBox3.Text = "Sửa dữ liệu khách hàng";
             // 
             // btnHuy
             // 
@@ -110,35 +94,21 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // btnThem
+            // btnSua
             // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnThem.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnThem.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(415, 452);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(147, 55);
-            this.btnThem.TabIndex = 43;
-            this.btnThem.Text = "Thêm mới";
-            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // lbGioitinh
-            // 
-            this.lbGioitinh.Location = new System.Drawing.Point(210, 370);
-            this.lbGioitinh.Name = "lbGioitinh";
-            this.lbGioitinh.Size = new System.Drawing.Size(333, 30);
-            this.lbGioitinh.TabIndex = 42;
-            // 
-            // lbCCCD
-            // 
-            this.lbCCCD.Location = new System.Drawing.Point(210, 285);
-            this.lbCCCD.Name = "lbCCCD";
-            this.lbCCCD.Size = new System.Drawing.Size(333, 30);
-            this.lbCCCD.TabIndex = 41;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnSua.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btnSua.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(430, 452);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(113, 55);
+            this.btnSua.TabIndex = 43;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtCCCD
             // 
@@ -147,14 +117,6 @@
             this.txtCCCD.Name = "txtCCCD";
             this.txtCCCD.Size = new System.Drawing.Size(328, 40);
             this.txtCCCD.TabIndex = 40;
-            this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
-            // 
-            // lbTenKH
-            // 
-            this.lbTenKH.Location = new System.Drawing.Point(210, 191);
-            this.lbTenKH.Name = "lbTenKH";
-            this.lbTenKH.Size = new System.Drawing.Size(333, 30);
-            this.lbTenKH.TabIndex = 39;
             // 
             // txtTenKH
             // 
@@ -163,13 +125,6 @@
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(328, 40);
             this.txtTenKH.TabIndex = 38;
-            // 
-            // lbMaKH
-            // 
-            this.lbMaKH.Location = new System.Drawing.Point(210, 96);
-            this.lbMaKH.Name = "lbMaKH";
-            this.lbMaKH.Size = new System.Drawing.Size(333, 30);
-            this.lbMaKH.TabIndex = 37;
             // 
             // cboGioitinh
             // 
@@ -190,21 +145,6 @@
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(328, 40);
             this.txtMaKH.TabIndex = 35;
-            this.txtMaKH.TextChanged += new System.EventHandler(this.txtMaKH_TextChanged);
-            // 
-            // lbTrangthai
-            // 
-            this.lbTrangthai.Location = new System.Drawing.Point(780, 370);
-            this.lbTrangthai.Name = "lbTrangthai";
-            this.lbTrangthai.Size = new System.Drawing.Size(333, 30);
-            this.lbTrangthai.TabIndex = 34;
-            // 
-            // lbDiachi
-            // 
-            this.lbDiachi.Location = new System.Drawing.Point(780, 285);
-            this.lbDiachi.Name = "lbDiachi";
-            this.lbDiachi.Size = new System.Drawing.Size(333, 30);
-            this.lbDiachi.TabIndex = 33;
             // 
             // txtDiachi
             // 
@@ -214,13 +154,6 @@
             this.txtDiachi.Size = new System.Drawing.Size(328, 40);
             this.txtDiachi.TabIndex = 32;
             // 
-            // lbEmail
-            // 
-            this.lbEmail.Location = new System.Drawing.Point(780, 191);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(333, 30);
-            this.lbEmail.TabIndex = 31;
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(785, 147);
@@ -228,14 +161,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(328, 40);
             this.txtEmail.TabIndex = 30;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            // 
-            // lbSDT
-            // 
-            this.lbSDT.Location = new System.Drawing.Point(780, 96);
-            this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(333, 30);
-            this.lbSDT.TabIndex = 23;
             // 
             // cboTrangthai
             // 
@@ -309,7 +234,6 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(328, 40);
             this.txtSDT.TabIndex = 3;
-            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // label3
             // 
@@ -329,15 +253,16 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên khách hàng";
             // 
-            // ThemKhachhang
+            // SuaKhachhang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1216, 559);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(1221, 568);
             this.Controls.Add(this.groupBox3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ThemKhachhang";
-            this.Text = "ThemKhachhang";
+            this.Name = "SuaKhachhang";
+            this.Text = "SuaKhachhang";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -347,7 +272,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label lbSDT;
+        private FontAwesome.Sharp.IconButton btnHuy;
+        private FontAwesome.Sharp.IconButton btnSua;
+        private System.Windows.Forms.TextBox txtCCCD;
+        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.ComboBox cboGioitinh;
+        private System.Windows.Forms.TextBox txtMaKH;
+        private System.Windows.Forms.TextBox txtDiachi;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox cboTrangthai;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -358,20 +290,5 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbGioitinh;
-        private System.Windows.Forms.Label lbCCCD;
-        private System.Windows.Forms.TextBox txtCCCD;
-        private System.Windows.Forms.Label lbTenKH;
-        private System.Windows.Forms.TextBox txtTenKH;
-        private System.Windows.Forms.Label lbMaKH;
-        private System.Windows.Forms.ComboBox cboGioitinh;
-        private System.Windows.Forms.TextBox txtMaKH;
-        private System.Windows.Forms.Label lbTrangthai;
-        private System.Windows.Forms.Label lbDiachi;
-        private System.Windows.Forms.TextBox txtDiachi;
-        private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox txtEmail;
-        private FontAwesome.Sharp.IconButton btnHuy;
-        private FontAwesome.Sharp.IconButton btnThem;
     }
 }
