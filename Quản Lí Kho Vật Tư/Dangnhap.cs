@@ -76,5 +76,7 @@ namespace Quản_Lí_Kho_Vật_Tư
         {
             txtMatkhau.UseSystemPasswordChar = !ckHienthimk.Checked;
         }
+
+        
     }
 }
