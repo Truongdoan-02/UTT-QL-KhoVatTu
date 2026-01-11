@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbNhomdoitac = new System.Windows.Forms.Label();
             this.btnHuy = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.txtGhichu = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbNhomdoitac = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +85,13 @@
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thêm mới đối tác";
+            // 
+            // lbNhomdoitac
+            // 
+            this.lbNhomdoitac.Location = new System.Drawing.Point(210, 285);
+            this.lbNhomdoitac.Name = "lbNhomdoitac";
+            this.lbNhomdoitac.Size = new System.Drawing.Size(333, 30);
+            this.lbNhomdoitac.TabIndex = 45;
             // 
             // btnHuy
             // 
@@ -278,20 +285,17 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên đối tác";
             // 
-            // lbNhomdoitac
-            // 
-            this.lbNhomdoitac.Location = new System.Drawing.Point(210, 285);
-            this.lbNhomdoitac.Name = "lbNhomdoitac";
-            this.lbNhomdoitac.Size = new System.Drawing.Size(333, 30);
-            this.lbNhomdoitac.TabIndex = 45;
-            // 
             // ThemDoitac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1228, 556);
             this.Controls.Add(this.groupBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ThemDoitac";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ThemDoitac";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

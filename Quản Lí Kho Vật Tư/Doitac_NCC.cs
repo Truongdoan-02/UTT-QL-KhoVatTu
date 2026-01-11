@@ -26,7 +26,7 @@ namespace Quản_Lí_Kho_Vật_Tư
         public DataGridView DgvNCC => dgvNCC;
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThemDoitac f= new ThemDoitac();
+            ThemDoitac f = new ThemDoitac();
             f.ShowDialog();
         }
 
@@ -204,12 +204,6 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
             }
         }
 
-
-        private void Doitac_NCC_Shown(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
         private void dgvNCC_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
@@ -238,6 +232,7 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
             }
 
         }
+
     }
     }
 
