@@ -322,6 +322,31 @@ namespace Quản_Lí_Kho_Vật_Tư
                 }
             }
         }
+
+        private void gbtimkiemnhanvien_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbdsnv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tablepaneltrai_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtmanv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbmanv_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
