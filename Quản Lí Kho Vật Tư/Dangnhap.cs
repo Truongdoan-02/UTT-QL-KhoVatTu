@@ -51,26 +51,30 @@ namespace Quản_Lí_Kho_Vật_Tư
                 Thuvien.con.Open();
             string sql = "Select * from Taikhoan where Taikhoan='" + tk + "' and Matkhau='" + mk + "'";
             SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
-            SqlDataReader kq = cmd.ExecuteReader();
-            if (kq.Read())
+            using (SqlDataReader kq = cmd.ExecuteReader())
             {
-                this.Hide();   
-
-                Tongquan f = new Tongquan();
-
-                // Khi Form mới đóng → đóng Trang chủ
-                f.FormClosed += (s, args) =>
+                if (kq.Read())
                 {
-                    this.Close();
-                };
+                    this.Hide();
 
-                f.Show();
+                    Tongquan f = new Tongquan();
+
+                    // Khi Form mới đóng → đóng Trang chủ
+                    f.FormClosed += (s, args) =>
+                    {
+                        this.Close();
+                    };
+
+                    f.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Thuvien.con.Close();
         }
+        
 
         private void ckHienthimk_CheckedChanged(object sender, EventArgs e)
         {
