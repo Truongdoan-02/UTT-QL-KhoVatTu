@@ -15,6 +15,9 @@ namespace Quản_Lí_Kho_Vật_Tư
 {
     public partial class Dangnhap : Form
     {
+
+        public static string TenNhanVien = "";
+        
         public Dangnhap()
         {
             InitializeComponent();
@@ -54,6 +57,11 @@ namespace Quản_Lí_Kho_Vật_Tư
             SqlDataReader kq = cmd.ExecuteReader();
             if (kq.Read())
             {
+
+                TenNhanVien = kq["Hoten"].ToString(); // tên cột trong DB
+                
+
+
                 this.Hide();   
 
                 Tongquan f = new Tongquan();
