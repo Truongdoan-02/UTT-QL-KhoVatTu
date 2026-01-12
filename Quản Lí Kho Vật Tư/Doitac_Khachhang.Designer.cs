@@ -81,6 +81,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.cboTrangthai_tk = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTenKH_tk = new System.Windows.Forms.TextBox();
@@ -90,7 +91,6 @@
             this.txtMaKH_tk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnXuat = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKH)).BeginInit();
@@ -475,6 +475,7 @@
             this.txtCCCD.Size = new System.Drawing.Size(180, 22);
             this.txtCCCD.TabIndex = 10;
             this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
+            this.txtCCCD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCCD_KeyPress);
             // 
             // label7
             // 
@@ -539,6 +540,7 @@
             this.txtSDT.Size = new System.Drawing.Size(194, 22);
             this.txtSDT.TabIndex = 3;
             this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // txtMaKH
             // 
@@ -584,6 +586,16 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm khách hàng";
+            // 
+            // btnXuat
+            // 
+            this.btnXuat.Location = new System.Drawing.Point(724, 86);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(99, 39);
+            this.btnXuat.TabIndex = 30;
+            this.btnXuat.Text = "Xuất Excel";
+            this.btnXuat.UseVisualStyleBackColor = true;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // cboTrangthai_tk
             // 
@@ -662,16 +674,6 @@
             this.label1.Size = new System.Drawing.Size(103, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên khách hàng";
-            // 
-            // btnXuat
-            // 
-            this.btnXuat.Location = new System.Drawing.Point(724, 86);
-            this.btnXuat.Name = "btnXuat";
-            this.btnXuat.Size = new System.Drawing.Size(99, 39);
-            this.btnXuat.TabIndex = 30;
-            this.btnXuat.Text = "Xuất Excel";
-            this.btnXuat.UseVisualStyleBackColor = true;
-            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
             // 
             // Doitac_Khachhang
             // 

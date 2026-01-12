@@ -45,26 +45,19 @@ namespace Quản_Lí_Kho_Vật_Tư
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-            // B1: Lấy dữ liệu trên các đk đưa vào biến
+
             string mkh = txtMaKH.Text.Trim();
             string ht = txtTenKH.Text.Trim();
-            string gt = cboGioitinh.SelectedItem.ToString().Trim();
+
+            string gt = (cboGioitinh.SelectedItem != null) ? cboGioitinh.SelectedItem.ToString().Trim() : "";
+            string tt = (cboTrangthai.SelectedItem != null) ? cboTrangthai.SelectedItem.ToString().Trim() : "";
+
             string dt = txtSDT.Text.Trim();
             string mail = txtEmail.Text.Trim();
-            string tt=cboTrangthai.SelectedItem.ToString().Trim();
             string dc = txtDiachi.Text.Trim();
             string cccd = txtCCCD.Text.Trim();
-            if (cboGioitinh.SelectedItem == null)
-                gt = "";
-            else
-                gt= cboGioitinh.SelectedItem.ToString();
 
-            if (cboTrangthai.SelectedItem == null)
-                tt = "";
-            else
-                tt = cboTrangthai.SelectedItem.ToString();
-
+//check trong
             if (Thuvien.checkTrong(mkh))
             {
                 txtMaKH.Focus();
@@ -79,7 +72,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                 lbTenKH.ForeColor = Color.Red;
                 return;
             }
-            if (Thuvien.checkTrong(gt))
+            if (string.IsNullOrEmpty(gt)) // Kiểm tra giới tính
             {
                 cboGioitinh.Focus();
                 lbGioitinh.Text = "Giới tính không được để trống";
@@ -100,7 +93,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                 lbEmail.ForeColor = Color.Red;
                 return;
             }
-            if (Thuvien.checkTrong(tt))
+            if (string.IsNullOrEmpty(tt)) // Kiểm tra trạng thái
             {
                 cboTrangthai.Focus();
                 lbTrangthai.Text = "Trạng thái không được để trống";
@@ -122,28 +115,38 @@ namespace Quản_Lí_Kho_Vật_Tư
                 return;
             }
 
-            //Kiem tra trung ma
-            //B2:Kết nối DB
 
-            if (Thuvien.con.State == ConnectionState.Closed)
-                Thuvien.con.Open();
-            //B3: Tạo đối tượng command để thực thi câu lệnh sql
-            string sql = "Insert Khachhang values(@mkh,@ht,@gt,@dt,@mail,@tt,@dc,@cccd)";
-            SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
-            cmd.Parameters.Add("@mkh", SqlDbType.NVarChar, 50).Value = mkh;
-            cmd.Parameters.Add("@ht", SqlDbType.NVarChar, 50).Value = ht;
-            cmd.Parameters.Add("@gt", SqlDbType.NVarChar, 50).Value = gt;
-            cmd.Parameters.Add("@dt", SqlDbType.VarChar, 10).Value = dt;
-            cmd.Parameters.Add("@mail", SqlDbType.NVarChar, 50).Value = mail;
-            cmd.Parameters.Add("@tt", SqlDbType.NVarChar, 100).Value = tt;
-            cmd.Parameters.Add("@dc", SqlDbType.NVarChar, 50).Value = dc;
-            cmd.Parameters.Add("@cccd", SqlDbType.NVarChar, 100).Value = cccd;
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            Thuvien.con.Close();
-            MessageBox.Show("Thêm mới thành công");
-            Thuvien.load_KH(dgvKH, "Select* from Khachhang");
-            ClearForm();
+            try
+            {
+                if (Thuvien.con.State == ConnectionState.Closed)
+                    Thuvien.con.Open();
+
+                string sql = "Insert into Khachhang values(@mkh, @ht, @gt, @dt, @mail, @tt, @dc, @cccd)";
+                SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
+
+                cmd.Parameters.AddWithValue("@mkh", mkh);
+                cmd.Parameters.AddWithValue("@ht", ht);
+                cmd.Parameters.AddWithValue("@gt", gt);
+                cmd.Parameters.AddWithValue("@dt", dt);
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@tt", tt);
+                cmd.Parameters.AddWithValue("@dc", dc);
+                cmd.Parameters.AddWithValue("@cccd", cccd);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm mới thành công");
+
+                Thuvien.load_KH(dgvKH, "Select * from Khachhang");
+                ClearForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                Thuvien.con.Close();
+            }
         }
 
         private void Doitac_Khachhang_Load(object sender, EventArgs e)
@@ -162,21 +165,34 @@ namespace Quản_Lí_Kho_Vật_Tư
             cboTrangthai.Text = Convert.ToString(dgvKH.Rows[i].Cells["Trangthai"].Value);
             txtDiachi.Text = Convert.ToString(dgvKH.Rows[i].Cells["Diachinhanhang"].Value);
             txtCCCD.Text = Convert.ToString(dgvKH.Rows[i].Cells["CCCD"].Value);
-            txtMaKH.Enabled = false;
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            // B1: Lấy dữ liệu từ giao diện
             string mkh = txtMaKH.Text.Trim();
             string ht = txtTenKH.Text.Trim();
-            string gt = cboGioitinh.SelectedItem.ToString().Trim();
+
+            // SỬA TẠI ĐÂY: Dùng .Text để tránh lỗi crash khi chưa chọn item
+            string gt = cboGioitinh.Text.Trim();
             string dt = txtSDT.Text.Trim();
             string mail = txtEmail.Text.Trim();
-            string tt = cboTrangthai.SelectedItem.ToString().Trim();
+            string tt = cboTrangthai.Text.Trim();
+
             string dc = txtDiachi.Text.Trim();
             string cccd = txtCCCD.Text.Trim();
-            Thuvien.upd_del("Update Khachhang set Tenkhachhang=N'" + ht + "',Gioitinh=N'" + gt + "',SDT='" + dt + "',Email='" + mail + "',Trangthai=N'" + tt + "',Diachi=N'" + dc + "',CCCD=N'"+cccd+"' where Makhachhang='" + mkh + "'");
-            Thuvien.load_KH(dgvKH, "Select* from Khachhang");
+
+            // B2: Cập nhật vào Database
+            // Lưu ý: Đảm bảo các biến ht, gt, tt, dc có N' phía trước để không bị lỗi font tiếng Việt
+            string query = "Update Khachhang set Tenkhachhang=N'" + ht + "', Gioitinh=N'" + gt + "', SDT='" + dt + "', Email='" + mail + "', Trangthai=N'" + tt + "', Diachinhanhang=N'" + dc + "', CCCD=N'" + cccd + "' where Makhachhang='" + mkh + "'";
+
+            Thuvien.upd_del(query);
+
+            // B3: Làm mới lại lưới hiển thị
+            Thuvien.load_KH(dgvKH, "Select * from Khachhang");
+
+            MessageBox.Show("Cập nhật dữ liệu thành công!");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -405,7 +421,24 @@ namespace Quản_Lí_Kho_Vật_Tư
             Thuvien.con.Close();
             ExportExcel(tb, "DSDoitac");
         }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; 
+            }
+        }
+
+        private void txtCCCD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
     }
+    
     
 

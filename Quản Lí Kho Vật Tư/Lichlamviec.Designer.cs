@@ -117,6 +117,7 @@
             this.nhanvien.Size = new System.Drawing.Size(208, 28);
             this.nhanvien.TabIndex = 11;
             this.nhanvien.Text = "Chọn nhân viên";
+
             // 
             // xoa
             // 

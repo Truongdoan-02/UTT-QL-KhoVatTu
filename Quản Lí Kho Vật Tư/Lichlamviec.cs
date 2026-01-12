@@ -37,7 +37,6 @@ namespace Quản_Lí_Kho_Vật_Tư
         }
         private void Taicomboboxnhanvien()
         {
-            // Viết câu lệnh SQL
             string sql = "SELECT Manv, Hoten FROM Danhsachnhanvien";
 
 
@@ -46,7 +45,6 @@ namespace Quản_Lí_Kho_Vật_Tư
             dr["Manv"] = "";
             dr["Hoten"] = "Chọn nhân viên";
             dt.Rows.InsertAt(dr, 0);
-            // Gán vào ComboBox
             nhanvien.DataSource = dt;
             nhanvien.DisplayMember = "Hoten";
             nhanvien.ValueMember = "Manv";
@@ -117,7 +115,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                 string ngayMoi = ngay.Value.ToString("yyyy-MM-dd");
                 string caMoi = ca.Text;
                 string ghichuMoi = ghichu.Text;
-                //lay du lieu cu
+
                 string manvCu = dgv.CurrentRow.Cells["Mã nhân viên"].Value.ToString();
                 string ngayCu = DateTime.Parse(dgv.CurrentRow.Cells["Ngày Làm"].Value.ToString()).ToString("yyyy-MM-dd");
                 string caCu = dgv.CurrentRow.Cells["Ca Làm"].Value.ToString();
@@ -239,12 +237,10 @@ namespace Quản_Lí_Kho_Vật_Tư
 
         private void thongke_Click(object sender, EventArgs e)
         {
-            // Để người dùng biết đang thống kê cho tháng nào
+
             int thang = ngaytk.Value.Month;
             int nam = ngaytk.Value.Year;
 
-            // 2. Viết câu lệnh SQL dùng GROUP BY để đếm số lượng
-            // Logic: Đếm số dòng (COUNT) trong bảng Lịch làm việc, nhóm theo Mã và Tên nhân viên
             string sql = @"SELECT 
                     L.Manv AS [Mã nhân viên], 
                     N.Hoten AS [Họ Tên], 
@@ -301,13 +297,14 @@ namespace Quản_Lí_Kho_Vật_Tư
 
                 exApp.Visible = true;
 
-                // (Hoặc dùng SaveFileDialog nếu muốn lưu file luôn thay vì chỉ mở lên)
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi xuất Excel: " + ex.Message, "Lỗi");
             }
         }
+
+
     }
     }
 
