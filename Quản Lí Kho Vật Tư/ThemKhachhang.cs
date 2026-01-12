@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Quản_Lí_Kho_Vật_Tư
 {
@@ -90,6 +91,29 @@ namespace Quản_Lí_Kho_Vật_Tư
             {
                 txtCCCD.Focus();
                 lbCCCD.Text = "CCCD không được để trống";
+                lbCCCD.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkDienThoai(dt))
+            {
+                txtSDT.Focus();
+                lbSDT.Text = "Số điện thoại không đúng";
+                lbSDT.ForeColor = Color.Red;
+                return;
+            }
+
+            if (Thuvien.checkEmail(mail))
+            {
+                txtEmail.Focus();
+                lbEmail.Text = "Email không đúng";
+                lbEmail.ForeColor = Color.Red;
+                return;
+            }
+
+            if (Thuvien.checkCCCD(cccd))
+            {
+                txtCCCD.Focus();
+                lbCCCD.Text = "CCCD phải đủ 12 chữ số!";
                 lbCCCD.ForeColor = Color.Red;
                 return;
             }

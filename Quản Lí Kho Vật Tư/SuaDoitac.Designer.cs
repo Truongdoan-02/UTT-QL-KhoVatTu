@@ -29,12 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbNhomdoitac = new System.Windows.Forms.Label();
             this.btnHuy = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.txtGhichu = new System.Windows.Forms.TextBox();
+            this.lbTendoitac = new System.Windows.Forms.Label();
             this.txtTendoitac = new System.Windows.Forms.TextBox();
+            this.lbMadoitac = new System.Windows.Forms.Label();
             this.cboNhomdoitac = new System.Windows.Forms.ComboBox();
             this.txtMadoitac = new System.Windows.Forms.TextBox();
+            this.lbDiachi = new System.Windows.Forms.Label();
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -47,10 +51,6 @@
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbDiachi = new System.Windows.Forms.Label();
-            this.lbNhomdoitac = new System.Windows.Forms.Label();
-            this.lbTendoitac = new System.Windows.Forms.Label();
-            this.lbMadoitac = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,12 +79,22 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Location = new System.Drawing.Point(9, 10);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1194, 506);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(896, 411);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thêm mới đối tác";
+            // 
+            // lbNhomdoitac
+            // 
+            this.lbNhomdoitac.Location = new System.Drawing.Point(158, 232);
+            this.lbNhomdoitac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbNhomdoitac.Name = "lbNhomdoitac";
+            this.lbNhomdoitac.Size = new System.Drawing.Size(250, 24);
+            this.lbNhomdoitac.TabIndex = 45;
             // 
             // btnHuy
             // 
@@ -93,9 +103,10 @@
             this.btnHuy.IconColor = System.Drawing.Color.Black;
             this.btnHuy.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHuy.Location = new System.Drawing.Point(667, 426);
+            this.btnHuy.Location = new System.Drawing.Point(500, 346);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(128, 55);
+            this.btnHuy.Size = new System.Drawing.Size(111, 45);
             this.btnHuy.TabIndex = 44;
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -109,9 +120,10 @@
             this.btnThem.IconColor = System.Drawing.Color.WhiteSmoke;
             this.btnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(501, 426);
+            this.btnThem.Location = new System.Drawing.Point(376, 346);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(108, 55);
+            this.btnThem.Size = new System.Drawing.Size(81, 45);
             this.btnThem.TabIndex = 43;
             this.btnThem.Text = "Sửa";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -120,19 +132,37 @@
             // 
             // txtGhichu
             // 
-            this.txtGhichu.Location = new System.Drawing.Point(215, 327);
+            this.txtGhichu.Location = new System.Drawing.Point(161, 266);
+            this.txtGhichu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtGhichu.Multiline = true;
             this.txtGhichu.Name = "txtGhichu";
-            this.txtGhichu.Size = new System.Drawing.Size(898, 47);
+            this.txtGhichu.Size = new System.Drawing.Size(674, 39);
             this.txtGhichu.TabIndex = 40;
+            // 
+            // lbTendoitac
+            // 
+            this.lbTendoitac.Location = new System.Drawing.Point(158, 155);
+            this.lbTendoitac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTendoitac.Name = "lbTendoitac";
+            this.lbTendoitac.Size = new System.Drawing.Size(250, 24);
+            this.lbTendoitac.TabIndex = 39;
             // 
             // txtTendoitac
             // 
-            this.txtTendoitac.Location = new System.Drawing.Point(215, 147);
+            this.txtTendoitac.Location = new System.Drawing.Point(161, 119);
+            this.txtTendoitac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTendoitac.Multiline = true;
             this.txtTendoitac.Name = "txtTendoitac";
-            this.txtTendoitac.Size = new System.Drawing.Size(328, 40);
+            this.txtTendoitac.Size = new System.Drawing.Size(247, 33);
             this.txtTendoitac.TabIndex = 38;
+            // 
+            // lbMadoitac
+            // 
+            this.lbMadoitac.Location = new System.Drawing.Point(158, 78);
+            this.lbMadoitac.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbMadoitac.Name = "lbMadoitac";
+            this.lbMadoitac.Size = new System.Drawing.Size(250, 24);
+            this.lbMadoitac.TabIndex = 37;
             // 
             // cboNhomdoitac
             // 
@@ -140,154 +170,149 @@
             this.cboNhomdoitac.Items.AddRange(new object[] {
             "Giao hàng",
             "Nhà cung cấp"});
-            this.cboNhomdoitac.Location = new System.Drawing.Point(215, 248);
+            this.cboNhomdoitac.Location = new System.Drawing.Point(161, 202);
+            this.cboNhomdoitac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboNhomdoitac.Name = "cboNhomdoitac";
-            this.cboNhomdoitac.Size = new System.Drawing.Size(328, 33);
+            this.cboNhomdoitac.Size = new System.Drawing.Size(247, 27);
             this.cboNhomdoitac.TabIndex = 36;
             // 
             // txtMadoitac
             // 
-            this.txtMadoitac.Location = new System.Drawing.Point(215, 52);
+            this.txtMadoitac.Location = new System.Drawing.Point(161, 42);
+            this.txtMadoitac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMadoitac.Multiline = true;
             this.txtMadoitac.Name = "txtMadoitac";
-            this.txtMadoitac.Size = new System.Drawing.Size(328, 40);
+            this.txtMadoitac.Size = new System.Drawing.Size(247, 33);
             this.txtMadoitac.TabIndex = 35;
+            // 
+            // lbDiachi
+            // 
+            this.lbDiachi.Location = new System.Drawing.Point(585, 232);
+            this.lbDiachi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDiachi.Name = "lbDiachi";
+            this.lbDiachi.Size = new System.Drawing.Size(250, 24);
+            this.lbDiachi.TabIndex = 33;
             // 
             // txtDiachi
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(785, 241);
+            this.txtDiachi.Location = new System.Drawing.Point(589, 196);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDiachi.Multiline = true;
             this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(328, 40);
+            this.txtDiachi.Size = new System.Drawing.Size(247, 33);
             this.txtDiachi.TabIndex = 32;
             // 
             // lbEmail
             // 
-            this.lbEmail.Location = new System.Drawing.Point(780, 191);
+            this.lbEmail.Location = new System.Drawing.Point(585, 155);
+            this.lbEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(333, 30);
+            this.lbEmail.Size = new System.Drawing.Size(250, 24);
             this.lbEmail.TabIndex = 31;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(785, 147);
+            this.txtEmail.Location = new System.Drawing.Point(589, 119);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(328, 40);
+            this.txtEmail.Size = new System.Drawing.Size(247, 33);
             this.txtEmail.TabIndex = 30;
             // 
             // lbSDT
             // 
-            this.lbSDT.Location = new System.Drawing.Point(780, 96);
+            this.lbSDT.Location = new System.Drawing.Point(585, 78);
+            this.lbSDT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(333, 30);
+            this.lbSDT.Size = new System.Drawing.Size(250, 24);
             this.lbSDT.TabIndex = 23;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(700, 256);
+            this.label9.Location = new System.Drawing.Point(525, 208);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 25);
+            this.label9.Size = new System.Drawing.Size(55, 20);
             this.label9.TabIndex = 12;
             this.label9.Text = "Địa chỉ";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(711, 162);
+            this.label8.Location = new System.Drawing.Point(533, 132);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 25);
+            this.label8.Size = new System.Drawing.Size(46, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "Email";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(121, 349);
+            this.label7.Location = new System.Drawing.Point(91, 284);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 25);
+            this.label7.Size = new System.Drawing.Size(58, 20);
             this.label7.TabIndex = 9;
             this.label7.Text = "Ghi chú";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(71, 256);
+            this.label6.Location = new System.Drawing.Point(53, 208);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 25);
+            this.label6.Size = new System.Drawing.Size(100, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "Nhóm đối tác";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(96, 67);
+            this.label5.Location = new System.Drawing.Point(72, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 25);
+            this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Mã đối tác";
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(785, 52);
+            this.txtSDT.Location = new System.Drawing.Point(589, 42);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(328, 40);
+            this.txtSDT.Size = new System.Drawing.Size(247, 33);
             this.txtSDT.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(648, 67);
+            this.label3.Location = new System.Drawing.Point(486, 54);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 25);
+            this.label3.Size = new System.Drawing.Size(97, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "Số điện thoại";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(95, 162);
+            this.label4.Location = new System.Drawing.Point(71, 132);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 25);
+            this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên đối tác";
             // 
-            // lbDiachi
-            // 
-            this.lbDiachi.Location = new System.Drawing.Point(780, 285);
-            this.lbDiachi.Name = "lbDiachi";
-            this.lbDiachi.Size = new System.Drawing.Size(333, 30);
-            this.lbDiachi.TabIndex = 33;
-            // 
-            // lbNhomdoitac
-            // 
-            this.lbNhomdoitac.Location = new System.Drawing.Point(210, 285);
-            this.lbNhomdoitac.Name = "lbNhomdoitac";
-            this.lbNhomdoitac.Size = new System.Drawing.Size(333, 30);
-            this.lbNhomdoitac.TabIndex = 45;
-            // 
-            // lbTendoitac
-            // 
-            this.lbTendoitac.Location = new System.Drawing.Point(210, 191);
-            this.lbTendoitac.Name = "lbTendoitac";
-            this.lbTendoitac.Size = new System.Drawing.Size(333, 30);
-            this.lbTendoitac.TabIndex = 39;
-            // 
-            // lbMadoitac
-            // 
-            this.lbMadoitac.Location = new System.Drawing.Point(210, 96);
-            this.lbMadoitac.Name = "lbMadoitac";
-            this.lbMadoitac.Size = new System.Drawing.Size(333, 30);
-            this.lbMadoitac.TabIndex = 37;
-            // 
             // SuaDoitac
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1245, 526);
+            this.ClientSize = new System.Drawing.Size(934, 427);
             this.Controls.Add(this.groupBox3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SuaDoitac";
             this.Text = "SuaDoitac";
             this.groupBox3.ResumeLayout(false);

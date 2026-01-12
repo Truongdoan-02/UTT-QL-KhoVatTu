@@ -24,41 +24,13 @@ namespace Quản_Lí_Kho_Vật_Tư
             
         }
         public DataGridView DgvNCC => dgvNCC;
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            ThemDoitac f = new ThemDoitac();
-            f.ShowDialog();
-        }
+
 
         private void Doitac_NCC_Load(object sender, EventArgs e)
         {
             Thuvien.load_KH(dgvNCC, "Select* from Doitac_NCC");
         }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (dgvNCC.CurrentRow == null) return;
-            int i = dgvNCC.CurrentRow.Index;
-            if (i < 0) return;
-            string mdt = dgvNCC.Rows[i].Cells["Madoitac"].Value?.ToString();
-            DialogResult kq = MessageBox.Show("Ban chac chan muon xoa?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (kq == DialogResult.No)
-                return;
-            Thuvien.upd_del("Delete from Doitac_NCC where Madoitac='" + mdt + "'");
-            MessageBox.Show("Xoa thanh cong");
-            Thuvien.load_KH(dgvNCC, "Select* from Doitac_NCC");
-        }
 
-        private void btnTimkiem_Click(object sender, EventArgs e)
-        {
-            string mdt=txtMadoitac_tk.Text.Trim();
-            string ht=txtTendoitac_tk.Text.Trim();
-            string sdt=txtSDT_tk.Text.Trim();
-            string nhom=cboNhomdoitac_tk.Text.Trim();
-            Thuvien.load_KH(dgvNCC,"Select * from Doitac_NCC where Madoitac like '%" + mdt + "%' and " +
-                "Tendoitac like N'%" + ht + "%' and " +
-                "SDT like N'%" + sdt + "%' and " +
-                "Nhomdoitac like N'%" + nhom + "%'");
-        }
         public void ExportExcel(DataTable tb, string sheetname)
 {
 
@@ -168,41 +140,7 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
     cl_ngs.Columns.NumberFormat = "dd/mm/yyyy";
 
 }
-        private void btnXuat_Click(object sender, EventArgs e)
-        {
-            string mdt = txtMadoitac_tk.Text.Trim();
-            string ht = txtTendoitac_tk.Text.Trim();
-            string sdt = txtSDT_tk.Text.Trim();
-            string nhom = cboNhomdoitac_tk.Text.Trim();
-            if (Thuvien.con.State == ConnectionState.Closed)
-                Thuvien.con.Open();
 
-            string sql = " Select ROW_NUMBER() over(order by Madoitac) STT, * from Doitac_NCC where Madoitac like '%" + mdt + "%' and " +
-                "Tendoitac like N'%" + ht + "%' and " +
-                "SDT like N'%" + sdt + "%' and " +
-                "Nhomdoitac like N'%" + nhom + "%'";
-            SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
-            //B4: Tao doi tuong 
-            SqlDataAdapter da = new SqlDataAdapter();
-            da.SelectCommand = cmd;
-            //B5:Tao doi tuong datatable de lay du lieu tu da
-            DataTable tb = new DataTable();
-            da.Fill(tb);
-            cmd.Dispose();
-            Thuvien.con.Close();
-            ExportExcel(tb, "DSDoitac");
-        }
-
-        private void btnNhapExcel_Click(object sender, EventArgs e)
-        {
-            using (FileExcel f = new FileExcel())
-            {
-                if (f.ShowDialog(this) == DialogResult.OK)
-                {
-                    Thuvien.load_KH(dgvNCC,"Select * from DOitac_NCC"); 
-                }
-            }
-        }
 
         private void dgvNCC_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -351,6 +289,73 @@ int rowEnd = rowStart + tb.Rows.Count - 1;
             f.Show();
         }
 
+        private void btnTimkiem_Click_1(object sender, EventArgs e)
+        {
+            string mdt = txtMadoitac_tk.Text.Trim();
+            string ht = txtTendoitac_tk.Text.Trim();
+            string sdt = txtSDT_tk.Text.Trim();
+            string nhom = cboNhomdoitac_tk.Text.Trim();
+            Thuvien.load_KH(dgvNCC, "Select * from Doitac_NCC where Madoitac like '%" + mdt + "%' and " +
+                "Tendoitac like N'%" + ht + "%' and " +
+                "SDT like N'%" + sdt + "%' and " +
+                "Nhomdoitac like N'%" + nhom + "%'");
+        }
+
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            using (FileExcel f = new FileExcel())
+            {
+                if (f.ShowDialog(this) == DialogResult.OK)
+                {
+                    Thuvien.load_KH(dgvNCC, "Select * from DOitac_NCC");
+                }
+            }
+        }
+
+        private void btnXuat_Click_1(object sender, EventArgs e)
+        {
+            string mdt = txtMadoitac_tk.Text.Trim();
+            string ht = txtTendoitac_tk.Text.Trim();
+            string sdt = txtSDT_tk.Text.Trim();
+            string nhom = cboNhomdoitac_tk.Text.Trim();
+            if (Thuvien.con.State == ConnectionState.Closed)
+                Thuvien.con.Open();
+
+            string sql = " Select ROW_NUMBER() over(order by Madoitac) STT, * from Doitac_NCC where Madoitac like '%" + mdt + "%' and " +
+                "Tendoitac like N'%" + ht + "%' and " +
+                "SDT like N'%" + sdt + "%' and " +
+                "Nhomdoitac like N'%" + nhom + "%'";
+            SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
+            //B4: Tao doi tuong 
+            SqlDataAdapter da = new SqlDataAdapter();
+            da.SelectCommand = cmd;
+            //B5:Tao doi tuong datatable de lay du lieu tu da
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            cmd.Dispose();
+            Thuvien.con.Close();
+            ExportExcel(tb, "DSDoitac");
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            ThemDoitac f = new ThemDoitac();
+            f.ShowDialog();
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            if (dgvNCC.CurrentRow == null) return;
+            int i = dgvNCC.CurrentRow.Index;
+            if (i < 0) return;
+            string mdt = dgvNCC.Rows[i].Cells["Madoitac"].Value?.ToString();
+            DialogResult kq = MessageBox.Show("Ban chac chan muon xoa?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (kq == DialogResult.No)
+                return;
+            Thuvien.upd_del("Delete from Doitac_NCC where Madoitac='" + mdt + "'");
+            MessageBox.Show("Xoa thanh cong");
+            Thuvien.load_KH(dgvNCC, "Select* from Doitac_NCC");
+        }
     }
     }
 
