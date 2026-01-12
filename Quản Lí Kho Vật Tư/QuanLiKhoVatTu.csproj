@@ -80,6 +80,12 @@
     <Compile Include="Chitiet_hoadon.Designer.cs">
       <DependentUpon>Chitiet_hoadon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chitiet_hoadonxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chitiet_hoadonxuat.Designer.cs">
+      <DependentUpon>Chitiet_hoadonxuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dangky.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     <Compile Include="HoadonNhapkho.Designer.cs">
       <DependentUpon>HoadonNhapkho.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoadonXuatkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoadonXuatkho.Designer.cs">
+      <DependentUpon>HoadonXuatkho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lichlamviec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ql_vattuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ql_vattuDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ql_vattuDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Quanlikho.cs">
       <SubType>Form</SubType>
@@ -217,12 +234,6 @@
       <DependentUpon>Themnhanvien.cs</DependentUpon>
     </Compile>
     <Compile Include="Thuvien.cs" />
-    <Compile Include="Tongquan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tongquan.Designer.cs">
-      <DependentUpon>Tongquan.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Baocao.resx">
       <DependentUpon>Baocao.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +246,9 @@
     <Compile Include="Xuatkho.Designer.cs">
       <DependentUpon>Xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Chitiet_hoadonxuat.resx">
+      <DependentUpon>Chitiet_hoadonxuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dangky.resx">
       <DependentUpon>Dangky.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoadonNhapkho.resx">
       <DependentUpon>HoadonNhapkho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoadonXuatkho.resx">
+      <DependentUpon>HoadonXuatkho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lichlamviec.resx">
       <DependentUpon>Lichlamviec.cs</DependentUpon>
@@ -304,9 +321,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Themnhanvien.resx">
       <DependentUpon>Themnhanvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tongquan.resx">
-      <DependentUpon>Tongquan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
@@ -370,6 +384,17 @@
     <None Include="ql_vattuDataSet2.xss">
       <DependentUpon>ql_vattuDataSet2.xsd</DependentUpon>
     </None>
+    <None Include="ql_vattuDataSet3.xsc">
+      <DependentUpon>ql_vattuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ql_vattuDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ql_vattuDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ql_vattuDataSet3.xss">
+      <DependentUpon>ql_vattuDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Resources\FileNhap.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -412,6 +437,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
