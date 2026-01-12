@@ -322,31 +322,60 @@ namespace Quản_Lí_Kho_Vật_Tư
                 }
             }
         }
+        // ===== MENU CLICK HANDLERS (tạm thời) =====
 
-        private void gbtimkiemnhanvien_Enter(object sender, EventArgs e)
+        private void bÁNHÀNGToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // TODO: xử lý bán hàng
         }
 
-        private void lbdsnv_Click(object sender, EventArgs e)
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // TODO: xử lý khách hàng
         }
 
-        private void tablepaneltrai_Paint(object sender, PaintEventArgs e)
+        private void nhàCungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // TODO: xử lý nhà cung cấp
         }
 
-        private void txtmanv_TextChanged(object sender, EventArgs e)
+        private void xUẤTKHOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // TODO: xử lý xuất kho
         }
 
-        private void lbmanv_Click(object sender, EventArgs e)
+        private void nHẬPKHOToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            // TODO: xử lý nhập kho
         }
+        private void lịchLàmViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: xử lý lịch làm việc
+        }
+
+
+        private void băngChấmCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: xử lý bảng chấm công
+        }
+
+        private void bảngLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: xử lý bảng lương
+        }
+        private void qUẢNLÍTHUCHIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: xử lý quản lý thu chi
+        }
+
+        private void sẢNPHẢMDỊCHVỤToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // TODO: xử lý sản phẩm dịch vụ
+        }
+        private void tỒNKHOToolStripMenuItem_Click(object sender, EventArgs e)
+{
+    // TODO: xử lý tồn kho
+}
     }
 }
 
