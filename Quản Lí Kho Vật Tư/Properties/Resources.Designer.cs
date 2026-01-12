@@ -61,6 +61,26 @@ namespace Quản_Lí_Kho_Vật_Tư.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1697089139198 {
+            get {
+                object obj = ResourceManager.GetObject("1697089139198", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap channels4_banner {
+            get {
+                object obj = ResourceManager.GetObject("channels4_banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] FileMauKH {
@@ -77,16 +97,6 @@ namespace Quản_Lí_Kho_Vật_Tư.Properties {
             get {
                 object obj = ResourceManager.GetObject("FileNhap", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap images {
-            get {
-                object obj = ResourceManager.GetObject("images", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

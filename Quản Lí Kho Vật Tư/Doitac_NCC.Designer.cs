@@ -37,9 +37,14 @@
             this.nhàCungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sẢNPHẢMDỊCHVỤToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qUẢNLÍKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tỒNKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nHẬPKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xUẤTKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qUẢNLÍTHUCHIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁOCÁOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lỊCHLÀMVIỆCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvNCC = new System.Windows.Forms.DataGridView();
             this.Madoitac = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +60,7 @@
             this.btnXuat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnTimkiem = new System.Windows.Forms.Button();
+            this.btnTimkiem1 = new System.Windows.Forms.Button();
             this.cboNhomdoitac_tk = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTendoitac_tk = new System.Windows.Forms.TextBox();
@@ -64,11 +69,6 @@
             this.txtMadoitac_tk = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tỒNKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nHẬPKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xUẤTKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lỊCHLÀMVIỆCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
@@ -148,6 +148,27 @@
             this.qUẢNLÍKHOToolStripMenuItem.Size = new System.Drawing.Size(139, 50);
             this.qUẢNLÍKHOToolStripMenuItem.Text = "QUẢN LÍ KHO";
             // 
+            // tỒNKHOToolStripMenuItem
+            // 
+            this.tỒNKHOToolStripMenuItem.Name = "tỒNKHOToolStripMenuItem";
+            this.tỒNKHOToolStripMenuItem.Size = new System.Drawing.Size(177, 30);
+            this.tỒNKHOToolStripMenuItem.Text = "TỒN KHO";
+            this.tỒNKHOToolStripMenuItem.Click += new System.EventHandler(this.tỒNKHOToolStripMenuItem_Click);
+            // 
+            // nHẬPKHOToolStripMenuItem
+            // 
+            this.nHẬPKHOToolStripMenuItem.Name = "nHẬPKHOToolStripMenuItem";
+            this.nHẬPKHOToolStripMenuItem.Size = new System.Drawing.Size(177, 30);
+            this.nHẬPKHOToolStripMenuItem.Text = "NHẬP KHO";
+            this.nHẬPKHOToolStripMenuItem.Click += new System.EventHandler(this.nHẬPKHOToolStripMenuItem_Click);
+            // 
+            // xUẤTKHOToolStripMenuItem
+            // 
+            this.xUẤTKHOToolStripMenuItem.Name = "xUẤTKHOToolStripMenuItem";
+            this.xUẤTKHOToolStripMenuItem.Size = new System.Drawing.Size(177, 30);
+            this.xUẤTKHOToolStripMenuItem.Text = "XUẤT KHO";
+            this.xUẤTKHOToolStripMenuItem.Click += new System.EventHandler(this.xUẤTKHOToolStripMenuItem_Click);
+            // 
             // qUẢNLÍTHUCHIToolStripMenuItem
             // 
             this.qUẢNLÍTHUCHIToolStripMenuItem.Name = "qUẢNLÍTHUCHIToolStripMenuItem";
@@ -169,6 +190,20 @@
             this.nHÂNVIÊNToolStripMenuItem.Name = "nHÂNVIÊNToolStripMenuItem";
             this.nHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(123, 50);
             this.nHÂNVIÊNToolStripMenuItem.Text = "NHÂN VIÊN";
+            // 
+            // dANHSÁCHNHÂNVIÊNToolStripMenuItem
+            // 
+            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Name = "dANHSÁCHNHÂNVIÊNToolStripMenuItem";
+            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(292, 30);
+            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Text = "DANH SÁCH NHÂN VIÊN";
+            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.dANHSÁCHNHÂNVIÊNToolStripMenuItem_Click);
+            // 
+            // lỊCHLÀMVIỆCToolStripMenuItem
+            // 
+            this.lỊCHLÀMVIỆCToolStripMenuItem.Name = "lỊCHLÀMVIỆCToolStripMenuItem";
+            this.lỊCHLÀMVIỆCToolStripMenuItem.Size = new System.Drawing.Size(292, 30);
+            this.lỊCHLÀMVIỆCToolStripMenuItem.Text = "LỊCH LÀM VIỆC";
+            this.lỊCHLÀMVIỆCToolStripMenuItem.Click += new System.EventHandler(this.lỊCHLÀMVIỆCToolStripMenuItem_Click);
             // 
             // panel4
             // 
@@ -314,7 +349,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnNhapExcel);
             this.groupBox2.Controls.Add(this.btnXuat);
-            this.groupBox2.Controls.Add(this.btnTimkiem);
+            this.groupBox2.Controls.Add(this.btnTimkiem1);
             this.groupBox2.Controls.Add(this.cboNhomdoitac_tk);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txtTendoitac_tk);
@@ -340,16 +375,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Số điện thoại";
             // 
-            // btnTimkiem
+            // btnTimkiem1
             // 
-            this.btnTimkiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimkiem.Location = new System.Drawing.Point(1205, 52);
-            this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(97, 46);
-            this.btnTimkiem.TabIndex = 4;
-            this.btnTimkiem.Text = "Tìm kiếm";
-            this.btnTimkiem.UseVisualStyleBackColor = true;
-            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
+            this.btnTimkiem1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTimkiem1.Location = new System.Drawing.Point(1184, 22);
+            this.btnTimkiem1.Name = "btnTimkiem1";
+            this.btnTimkiem1.Size = new System.Drawing.Size(97, 46);
+            this.btnTimkiem1.TabIndex = 4;
+            this.btnTimkiem1.Text = "Tìm kiếm";
+            this.btnTimkiem1.UseVisualStyleBackColor = true;
+            this.btnTimkiem1.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // cboNhomdoitac_tk
             // 
@@ -439,40 +474,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1857, 191);
             this.panel1.TabIndex = 27;
-            // tỒNKHOToolStripMenuItem
-            // 
-            this.tỒNKHOToolStripMenuItem.Name = "tỒNKHOToolStripMenuItem";
-            this.tỒNKHOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tỒNKHOToolStripMenuItem.Text = "TỒN KHO";
-            this.tỒNKHOToolStripMenuItem.Click += new System.EventHandler(this.tỒNKHOToolStripMenuItem_Click);
-            // 
-            // nHẬPKHOToolStripMenuItem
-            // 
-            this.nHẬPKHOToolStripMenuItem.Name = "nHẬPKHOToolStripMenuItem";
-            this.nHẬPKHOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.nHẬPKHOToolStripMenuItem.Text = "NHẬP KHO";
-            this.nHẬPKHOToolStripMenuItem.Click += new System.EventHandler(this.nHẬPKHOToolStripMenuItem_Click);
-            // 
-            // xUẤTKHOToolStripMenuItem
-            // 
-            this.xUẤTKHOToolStripMenuItem.Name = "xUẤTKHOToolStripMenuItem";
-            this.xUẤTKHOToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.xUẤTKHOToolStripMenuItem.Text = "XUẤT KHO";
-            this.xUẤTKHOToolStripMenuItem.Click += new System.EventHandler(this.xUẤTKHOToolStripMenuItem_Click);
-            // 
-            // dANHSÁCHNHÂNVIÊNToolStripMenuItem
-            // 
-            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Name = "dANHSÁCHNHÂNVIÊNToolStripMenuItem";
-            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Text = "DANH SÁCH NHÂN VIÊN";
-            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem.Click += new System.EventHandler(this.dANHSÁCHNHÂNVIÊNToolStripMenuItem_Click);
-            // 
-            // lỊCHLÀMVIỆCToolStripMenuItem
-            // 
-            this.lỊCHLÀMVIỆCToolStripMenuItem.Name = "lỊCHLÀMVIỆCToolStripMenuItem";
-            this.lỊCHLÀMVIỆCToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.lỊCHLÀMVIỆCToolStripMenuItem.Text = "LỊCH LÀM VIỆC";
-            this.lỊCHLÀMVIỆCToolStripMenuItem.Click += new System.EventHandler(this.lỊCHLÀMVIỆCToolStripMenuItem_Click);
             // 
             // Doitac_NCC
             // 
@@ -523,7 +524,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtTendoitac_tk;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnTimkiem;
+        private System.Windows.Forms.Button btnTimkiem1;
         private System.Windows.Forms.TextBox txtSDT_tk;
         private System.Windows.Forms.Button btnXuat;
         private System.Windows.Forms.TextBox txtMadoitac_tk;
