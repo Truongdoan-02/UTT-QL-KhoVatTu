@@ -92,7 +92,7 @@
             this.btnHuy.Text = "Hủy bỏ";
             this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click_1);
             // 
             // btnSua
             // 

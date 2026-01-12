@@ -21,21 +21,10 @@ namespace Quản_Lí_Kho_Vật_Tư
         {
             string mkh = txtMaKH.Text.Trim();
             string ht = txtTenKH.Text.Trim();
-            string gt = cboGioitinh.SelectedItem.ToString().Trim();
             string dt = txtSDT.Text.Trim();
             string mail = txtEmail.Text.Trim();
-            string tt = cboTrangthai.SelectedItem.ToString().Trim();
             string dc = txtDiachi.Text.Trim();
             string cccd = txtCCCD.Text.Trim();
-            if (cboGioitinh.SelectedItem == null)
-                gt = "";
-            else
-                gt = cboGioitinh.SelectedItem.ToString();
-
-            if (cboTrangthai.SelectedItem == null)
-                tt = "";
-            else
-                tt = cboTrangthai.SelectedItem.ToString();
 
             if (Thuvien.checkTrong(mkh))
             {
@@ -51,17 +40,17 @@ namespace Quản_Lí_Kho_Vật_Tư
                 lbTenKH.ForeColor = Color.Red;
                 return;
             }
-            if (Thuvien.checkTrong(gt))
-            {
-                cboGioitinh.Focus();
-                lbGioitinh.Text = "Giới tính không được để trống";
-                lbGioitinh.ForeColor = Color.Red;
-                return;
-            }
             if (Thuvien.checkTrong(dt))
             {
                 txtSDT.Focus();
                 lbSDT.Text = "Số điện thoại không được để trống";
+                lbSDT.ForeColor = Color.Red;
+                return;
+            }
+            if (!Thuvien.checkDienThoai(dt))
+            {
+                txtSDT.Focus();
+                lbSDT.Text = "SĐT phải có 10 chữ số và chỉ chứa số";
                 lbSDT.ForeColor = Color.Red;
                 return;
             }
@@ -72,11 +61,11 @@ namespace Quản_Lí_Kho_Vật_Tư
                 lbEmail.ForeColor = Color.Red;
                 return;
             }
-            if (Thuvien.checkTrong(tt))
+            if (!Thuvien.checkEmail(mail))
             {
-                cboTrangthai.Focus();
-                lbTrangthai.Text = "Trạng thái không được để trống";
-                lbTrangthai.ForeColor = Color.Red;
+                txtEmail.Focus();
+                lbEmail.Text = "Email phải có đuôi @gmail.com";
+                lbEmail.ForeColor = Color.Red;
                 return;
             }
             if (Thuvien.checkTrong(dc))
@@ -93,10 +82,33 @@ namespace Quản_Lí_Kho_Vật_Tư
                 lbCCCD.ForeColor = Color.Red;
                 return;
             }
+            if (!Thuvien.checkCCCD(cccd))
+            {
+                txtCCCD.Focus();
+                lbCCCD.Text = "CCCD phải có đúng 12 chữ số";
+                lbCCCD.ForeColor = Color.Red;
+                return;
+            }
 
+            if (cboTrangthai.SelectedItem == null)
+            {
+                cboTrangthai.Focus();
+                lbTrangthai.Text = "Trạng thái không được để trống";
+                lbTrangthai.ForeColor = Color.Red;
+                return;
+            }
+            string tt = cboTrangthai.SelectedItem.ToString();
+            if (cboGioitinh.SelectedItem == null)
+            {
+                cboGioitinh.Focus();
+                lbGioitinh.Text = "Giới tính không được để trống";
+                lbGioitinh.ForeColor = Color.Red;
+                return;
+            }
+            string gt = cboGioitinh.SelectedItem.ToString();
             if (Thuvien.con.State == ConnectionState.Closed)
                 Thuvien.con.Open();
-            //B3: Tạo đối tượng command để thực thi câu lệnh sql
+
             string sql = "Insert Khachhang values(@mkh,@ht,@gt,@dt,@mail,@tt,@dc,@cccd)";
             SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
             cmd.Parameters.Add("@mkh", SqlDbType.NVarChar, 50).Value = mkh;
@@ -175,6 +187,24 @@ namespace Quản_Lí_Kho_Vật_Tư
             else
             {
                 lbCCCD.Text = "";
+            }
+        }
+
+        private void txtCCCD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+
+                e.Handled = true;
             }
         }
     }

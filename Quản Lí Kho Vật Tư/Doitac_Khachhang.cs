@@ -20,11 +20,6 @@ namespace Quản_Lí_Kho_Vật_Tư
             InitializeComponent();
         }
         public DataGridView DgvKH => dgvKH;
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            ThemKhachhang f = new ThemKhachhang();
-            f.ShowDialog();
-        }
 
         private void Doitac_Khachhang_Load(object sender, EventArgs e)
         {
@@ -33,8 +28,8 @@ namespace Quản_Lí_Kho_Vật_Tư
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dgvKH.CurrentRow == null) return;
-            int i= dgvKH.CurrentRow.Index;
-            if (i< 0) return;
+            int i = dgvKH.CurrentRow.Index;
+            if (i < 0) return;
             string mkh = dgvKH.Rows[i].Cells["MaKH"].Value?.ToString();
 
             DialogResult kq = MessageBox.Show("Ban chac chan muon xoa?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -69,14 +64,11 @@ namespace Quản_Lí_Kho_Vật_Tư
         }
         public void ExportExcel(DataTable tb, string sheetname)
         {
-            //Tạo các đối tượng Excel
-
             ex_cel.Application oExcel = new ex_cel.Application();
             ex_cel.Workbooks oBooks;
             ex_cel.Sheets oSheets;
             ex_cel.Workbook oBook;
             ex_cel.Worksheet oSheet;
-            //Tạo mới một Excel WorkBook 
             oExcel.Visible = true;
             oExcel.DisplayAlerts = false;
             oExcel.Application.SheetsInNewWorkbook = 1;
@@ -85,7 +77,6 @@ namespace Quản_Lí_Kho_Vật_Tư
             oSheets = oBook.Worksheets;
             oSheet = (ex_cel.Worksheet)oSheets.get_Item(1);
             oSheet.Name = sheetname;
-            // Tạo phần đầu nếu muốn
             ex_cel.Range head = oSheet.get_Range("A1", "H1");
             head.MergeCells = true;
             head.Value2 = "DANH SÁCH KHÁCH HÀNG";
@@ -93,7 +84,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             head.Font.Name = "Tahoma";
             head.Font.Size = "16";
             head.HorizontalAlignment = ex_cel.XlHAlign.xlHAlignCenter;
-            // Tạo tiêu đề cột 
+
             ex_cel.Range cl1 = oSheet.get_Range("A3", "A3");
             cl1.Value2 = "STT";
             cl1.ColumnWidth = 7.5;
@@ -130,54 +121,40 @@ namespace Quản_Lí_Kho_Vật_Tư
             cl9.Value2 = "CCCD";
             cl9.ColumnWidth = 20.0;
 
-            //ex_cel.Range cl6_1 = oSheet.get_Range("F4", "F1000");
-            //cl6_1.Columns.NumberFormat = "dd/mm/yyyy";
-
             ex_cel.Range rowHead = oSheet.get_Range("A3", "K3");
             rowHead.Font.Bold = true;
-            // Kẻ viền
             rowHead.Borders.LineStyle = ex_cel.Constants.xlSolid;
-            // Thiết lập màu nền
             rowHead.Interior.ColorIndex = 15;
             rowHead.HorizontalAlignment = ex_cel.XlHAlign.xlHAlignCenter;
-            // Tạo mảng đối tượng để lưu dữ toàn bồ dữ liệu trong DataTable,
-            // vì dữ liệu được được gán vào các Cell trong Excel phải thông qua object thuần.
             object[,] arr = new object[tb.Rows.Count, tb.Columns.Count];
-            //Chuyển dữ liệu từ DataTable vào mảng đối tượng
+
             for (int r = 0; r < tb.Rows.Count; r++)
             {
                 DataRow dr = tb.Rows[r];
                 for (int c = 0; c < tb.Columns.Count; c++)
 
                 {
-                    if (c == 4||c==8)
+                    if (c == 4 || c == 8)
                         arr[r, c] = "'" + dr[c];
                     else
                         arr[r, c] = dr[c];
 
                 }
             }
-            //Thiết lập vùng điền dữ liệu
+
             int rowStart = 4;
             int columnStart = 1;
             int rowEnd = rowStart + tb.Rows.Count - 1;
             int columnEnd = tb.Columns.Count;
-            // Ô bắt đầu điền dữ liệu
             ex_cel.Range c1 = (ex_cel.Range)oSheet.Cells[rowStart, columnStart];
-            // Ô kết thúc điền dữ liệu
             ex_cel.Range c2 = (ex_cel.Range)oSheet.Cells[rowEnd, columnEnd];
-            // Lấy về vùng điền dữ liệu
             ex_cel.Range range = oSheet.get_Range(c1, c2);
-            //Điền dữ liệu vào vùng đã thiết lập
             range.Value2 = arr;
 
-            // Kẻ viền
             range.Borders.LineStyle = ex_cel.Constants.xlSolid;
-            // Căn giữa cột STT
             ex_cel.Range c3 = (ex_cel.Range)oSheet.Cells[rowEnd, columnStart];
             ex_cel.Range c4 = oSheet.get_Range(c1, c3);
             oSheet.get_Range(c3, c4).HorizontalAlignment = ex_cel.XlHAlign.xlHAlignCenter;
-            //Định dạng ngày sinh
             ex_cel.Range cl_ngs = oSheet.get_Range("D" + rowStart, "D" + rowEnd);
             cl_ngs.Columns.NumberFormat = "dd/mm/yyyy";
 
@@ -195,10 +172,8 @@ namespace Quản_Lí_Kho_Vật_Tư
                 "SDT like N'%" + sdt + "%' and " +
                 "Trangthai like N'%" + tt + "%'";
             SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
-            //B4: Tao doi tuong 
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
-            //B5:Tao doi tuong datatable de lay du lieu tu da
             DataTable tb = new DataTable();
             da.Fill(tb);
             cmd.Dispose();
@@ -208,11 +183,10 @@ namespace Quản_Lí_Kho_Vật_Tư
 
         private void nhàCungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();   // Ẩn Trang chủ
+            this.Hide();
 
             Doitac_NCC f = new Doitac_NCC();
 
-            // Khi Form mới đóng → đóng Trang chủ
             f.FormClosed += (s, args) =>
             {
                 this.Close();
@@ -223,11 +197,10 @@ namespace Quản_Lí_Kho_Vật_Tư
 
         private void sẢNPHẢMDỊCHVỤToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();   // Ẩn Trang chủ
+            this.Hide();
 
             Sanphamdichvu f = new Sanphamdichvu();
 
-            // Khi Form mới đóng → đóng Trang chủ
             f.FormClosed += (s, args) =>
             {
                 this.Close();
@@ -329,21 +302,22 @@ namespace Quản_Lí_Kho_Vật_Tư
         private void dgvKH_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = e.RowIndex;
-            string mkh= Convert.ToString(dgvKH.Rows[i].Cells["MaKH"].Value);
+            if (i < 0) return;
+            string mkh = Convert.ToString(dgvKH.Rows[i].Cells["MaKH"].Value);
             string ht = Convert.ToString(dgvKH.Rows[i].Cells["Hoten"].Value);
-            string gt= Convert.ToString(dgvKH.Rows[i].Cells["Gioitinh"].Value);
-            string sdt= Convert.ToString(dgvKH.Rows[i].Cells["SDT"].Value);
+            string gt = Convert.ToString(dgvKH.Rows[i].Cells["Gioitinh"].Value);
+            string sdt = Convert.ToString(dgvKH.Rows[i].Cells["SDT"].Value);
             string email = Convert.ToString(dgvKH.Rows[i].Cells["Email"].Value);
             string tt = Convert.ToString(dgvKH.Rows[i].Cells["Trangthai"].Value);
-            string diachi= Convert.ToString(dgvKH.Rows[i].Cells["Diachinhanhang"].Value);
+            string diachi = Convert.ToString(dgvKH.Rows[i].Cells["Diachinhanhang"].Value);
             string cccd = Convert.ToString(dgvKH.Rows[i].Cells["CCCD"].Value);
 
-            using (SuaKhachhang dlg = new SuaKhachhang(mkh, ht,gt, sdt,email,tt,diachi,cccd))
+            using (SuaKhachhang dlg = new SuaKhachhang(mkh, ht, gt, sdt, email, tt, diachi, cccd))
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    mkh= dlg.MaKH;
-                    ht= dlg.TenKH;
+                    mkh = dlg.MaKH;
+                    ht = dlg.TenKH;
                     gt = dlg.GioiTinh;
                     sdt = dlg.SDT;
                     email = dlg.Email;
@@ -356,8 +330,48 @@ namespace Quản_Lí_Kho_Vật_Tư
                 }
             }
         }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            ThemKhachhang f = new ThemKhachhang();
+            f.ShowDialog();
+        }
+
+        private void btnhienthi_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT Makhachhang, Tenkhachhang, Gioitinh, SDT, Email, Trangthai, Diachinhanhang, CCCD FROM Khachhang";
+
+            Thuvien.load_KH(dgvKH, sql);
+            txtMaKH_tk.Clear();
+            txtSDT_tk.Clear();
+            txtTenKH_tk.Clear();
+            cboTrangthai_tk.Text = "";
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            if (dgvKH.CurrentRow == null) return;
+            int i = dgvKH.CurrentRow.Index;
+            if (i < 0) return;
+            string mkh = dgvKH.Rows[i].Cells["MaKH"].Value?.ToString();
+
+            DialogResult kq = MessageBox.Show("Ban chac chan muon xoa?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (kq == DialogResult.No)
+                return;
+            Thuvien.upd_del("Delete from Khachhang where Makhachhang= N'" + mkh + "'");
+            MessageBox.Show("Xoa thanh cong");
+            Thuvien.load_KH(dgvKH, "Select* from Khachhang");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Close", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Close();
+        }
     }
-    }
+}
+
+    
     
     
 
