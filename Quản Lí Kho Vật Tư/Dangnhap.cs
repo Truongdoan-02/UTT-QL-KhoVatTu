@@ -78,9 +78,10 @@ namespace Quản_Lí_Kho_Vật_Tư
                 {
                     MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
             Thuvien.con.Close();
         }
+            
+        
         
 
         private void ckHienthimk_CheckedChanged(object sender, EventArgs e)

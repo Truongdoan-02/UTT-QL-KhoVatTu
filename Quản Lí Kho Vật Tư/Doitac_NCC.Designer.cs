@@ -62,8 +62,13 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtSDT_tk = new System.Windows.Forms.TextBox();
             this.txtMadoitac_tk = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tỒNKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nHẬPKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xUẤTKHOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dANHSÁCHNHÂNVIÊNToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lỊCHLÀMVIỆCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCC)).BeginInit();
@@ -434,7 +439,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1857, 191);
             this.panel1.TabIndex = 27;
-            // 
             // tỒNKHOToolStripMenuItem
             // 
             this.tỒNKHOToolStripMenuItem.Name = "tỒNKHOToolStripMenuItem";
@@ -526,5 +530,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dgvNCC;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnNhapExcel;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem tỒNKHOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nHẬPKHOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xUẤTKHOToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dANHSÁCHNHÂNVIÊNToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lỊCHLÀMVIỆCToolStripMenuItem;
     }
 }

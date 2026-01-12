@@ -128,6 +128,12 @@
     <Compile Include="FileExcel_NV.Designer.cs">
       <DependentUpon>FileExcel_NV.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoadonNhapkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoadonNhapkho.Designer.cs">
+      <DependentUpon>HoadonNhapkho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lichlamviec.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QL_KhoVatTuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ql_vattuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ql_vattuDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Quanlikho.cs">
       <SubType>Form</SubType>
@@ -241,6 +252,9 @@
     <EmbeddedResource Include="FileExcel_NV.resx">
       <DependentUpon>FileExcel_NV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HoadonNhapkho.resx">
+      <DependentUpon>HoadonNhapkho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lichlamviec.resx">
       <DependentUpon>Lichlamviec.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +326,17 @@
     </None>
     <None Include="QL_KhoVatTuDataSet.xss">
       <DependentUpon>QL_KhoVatTuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ql_vattuDataSet.xsc">
+      <DependentUpon>ql_vattuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ql_vattuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ql_vattuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ql_vattuDataSet.xss">
+      <DependentUpon>ql_vattuDataSet.xsd</DependentUpon>
     </None>
     <None Include="Resources\FileNhap.xlsx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
