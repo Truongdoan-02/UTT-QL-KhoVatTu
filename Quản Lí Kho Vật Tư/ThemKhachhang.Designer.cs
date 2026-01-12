@@ -148,7 +148,6 @@
             this.txtCCCD.Size = new System.Drawing.Size(328, 40);
             this.txtCCCD.TabIndex = 40;
             this.txtCCCD.TextChanged += new System.EventHandler(this.txtCCCD_TextChanged);
-            this.txtCCCD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCCD_KeyPress);
             // 
             // lbTenKH
             // 
@@ -311,7 +310,6 @@
             this.txtSDT.Size = new System.Drawing.Size(328, 40);
             this.txtSDT.TabIndex = 3;
             this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
-            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // label3
             // 
