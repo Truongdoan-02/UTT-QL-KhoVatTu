@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace Quản_Lí_Kho_Vật_Tư
@@ -36,23 +37,139 @@ namespace Quản_Lí_Kho_Vật_Tư
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            MaKH = txtMaKH.Text;
-            TenKH = txtTenKH.Text;
+            string mkh = txtMaKH.Text.Trim();
+            string ht = txtTenKH.Text.Trim();
+            string dt = txtSDT.Text.Trim();
+            string mail = txtEmail.Text.Trim();
+            string dc = txtDiachi.Text.Trim();
+            string cccd_val = txtCCCD.Text.Trim();
+            if (Thuvien.checkTrong(ht))
+            {
+                txtTenKH.Focus();
+                txtTenKH.Text = "Tên khách hàng không được để trống";
+                txtTenKH.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(dt))
+            {
+                txtSDT.Focus();
+                txtSDT.Text = "Số điện thoại không được để trống";
+                txtSDT.ForeColor = Color.Red;
+                return;
+            }
+            if (!Thuvien.checkDienThoai(dt))
+            {
+                txtSDT.Focus();
+                txtSDT.Text = "SĐT phải có 10 chữ số và chỉ chứa số";
+                txtSDT.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(mail))
+            {
+                txtEmail.Focus();
+                txtEmail.Text = "Email không được để trống";
+                txtEmail.ForeColor = Color.Red;
+                return;
+            }
+            if (!Thuvien.checkEmail(mail))
+            {
+                txtEmail.Focus();
+                txtEmail.Text = "Email phải có đuôi @gmail.com";
+                txtEmail.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(dc))
+            {
+                txtDiachi.Focus();
+                txtDiachi.Text = "Địa chỉ không được để trống";
+                txtDiachi.ForeColor = Color.Red;
+                return;
+            }
+            if (Thuvien.checkTrong(cccd_val))
+            {
+                txtCCCD.Focus();
+                txtCCCD.Text = "CCCD không được để trống";
+                txtCCCD.ForeColor = Color.Red;
+                return;
+            }
+            if (!Thuvien.checkCCCD(cccd_val))
+            {
+                txtCCCD.Focus();
+                txtCCCD.Text = "CCCD phải có đúng 12 chữ số";
+                txtCCCD.ForeColor = Color.Red;
+                return;
+            }
+            if (cboTrangthai.SelectedItem == null && string.IsNullOrEmpty(cboTrangthai.Text))
+            {
+                cboTrangthai.Focus();
+                cboTrangthai.Text = "Trạng thái không được để trống";
+                cboTrangthai.ForeColor = Color.Red;
+                return;
+            }
+            if (cboGioitinh.SelectedItem == null && string.IsNullOrEmpty(cboGioitinh.Text))
+            {
+                cboGioitinh.Focus();
+                cboGioitinh.Text = "Giới tính không được để trống";
+                cboGioitinh.ForeColor = Color.Red;
+                return;
+            }
+            MaKH = mkh;
+            TenKH = ht;
             GioiTinh = cboGioitinh.Text;
-            SDT = txtSDT.Text;
-            Email = txtEmail.Text;
+            SDT = dt;
+            Email = mail;
             TrangThai = cboTrangthai.Text;
-            DiaChi = txtDiachi.Text;
-            CCCD = txtCCCD.Text;
+            DiaChi = dc;
+            CCCD = cccd_val;
 
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void BtnHuy_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            txtSDT.Text = "";
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail.Text = "";
+        }
+
+        private void txtCCCD_TextChanged(object sender, EventArgs e)
+        {
+            txtCCCD.Text = "";
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+        private void txtCCCD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+
+
+        private void btnHuy_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -439,10 +439,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\channels4_banner.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1697089139198.jpg" />
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
