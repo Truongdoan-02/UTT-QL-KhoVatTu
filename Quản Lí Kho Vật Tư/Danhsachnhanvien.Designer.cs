@@ -72,10 +72,10 @@
             this.gbtimkiemnhanvien = new System.Windows.Forms.GroupBox();
             this.panelsearch = new System.Windows.Forms.Panel();
             this.tablepaneltimkiem = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.paneltrai = new System.Windows.Forms.Panel();
             this.lbmanv = new System.Windows.Forms.Label();
             this.txtmanv = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelphai = new System.Windows.Forms.Panel();
             this.lbsdt = new System.Windows.Forms.Label();
             this.txtsdt = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -92,8 +92,8 @@
             this.gbtimkiemnhanvien.SuspendLayout();
             this.panelsearch.SuspendLayout();
             this.tablepaneltimkiem.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.paneltrai.SuspendLayout();
+            this.panelphai.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qL_KhoVatTuDataSet1)).BeginInit();
@@ -389,17 +389,17 @@
             // tablepaneltimkiem
             // 
             resources.ApplyResources(this.tablepaneltimkiem, "tablepaneltimkiem");
-            this.tablepaneltimkiem.Controls.Add(this.panel1, 0, 0);
-            this.tablepaneltimkiem.Controls.Add(this.panel3, 1, 0);
+            this.tablepaneltimkiem.Controls.Add(this.paneltrai, 0, 0);
+            this.tablepaneltimkiem.Controls.Add(this.panelphai, 1, 0);
             this.tablepaneltimkiem.Controls.Add(this.panel4, 2, 0);
             this.tablepaneltimkiem.Name = "tablepaneltimkiem";
             // 
-            // panel1
+            // paneltrai
             // 
-            this.panel1.Controls.Add(this.lbmanv);
-            this.panel1.Controls.Add(this.txtmanv);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.paneltrai.Controls.Add(this.lbmanv);
+            this.paneltrai.Controls.Add(this.txtmanv);
+            resources.ApplyResources(this.paneltrai, "paneltrai");
+            this.paneltrai.Name = "paneltrai";
             // 
             // lbmanv
             // 
@@ -413,12 +413,12 @@
             this.txtmanv.Name = "txtmanv";
             this.txtmanv.TextChanged += new System.EventHandler(this.txtmanv_TextChanged);
             // 
-            // panel3
+            // panelphai
             // 
-            this.panel3.Controls.Add(this.lbsdt);
-            this.panel3.Controls.Add(this.txtsdt);
-            resources.ApplyResources(this.panel3, "panel3");
-            this.panel3.Name = "panel3";
+            this.panelphai.Controls.Add(this.lbsdt);
+            this.panelphai.Controls.Add(this.txtsdt);
+            resources.ApplyResources(this.panelphai, "panelphai");
+            this.panelphai.Name = "panelphai";
             // 
             // lbsdt
             // 
@@ -502,10 +502,10 @@
             this.gbtimkiemnhanvien.ResumeLayout(false);
             this.panelsearch.ResumeLayout(false);
             this.tablepaneltimkiem.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.paneltrai.ResumeLayout(false);
+            this.paneltrai.PerformLayout();
+            this.panelphai.ResumeLayout(false);
+            this.panelphai.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.qL_KhoVatTuDataSet1)).EndInit();
@@ -553,8 +553,8 @@
         private QL_KhoVatTuDataSet qL_KhoVatTuDataSet2;
         private System.Windows.Forms.Panel panelsearch;
         private System.Windows.Forms.TableLayoutPanel tablepaneltimkiem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel paneltrai;
+        private System.Windows.Forms.Panel panelphai;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn fgmanv;
