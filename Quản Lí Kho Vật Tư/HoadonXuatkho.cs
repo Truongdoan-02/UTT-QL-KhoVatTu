@@ -7,16 +7,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using ex_cel = Microsoft.Office.Interop.Excel;
 namespace Quản_Lí_Kho_Vật_Tư
 {
-    public partial class HoadonNhapkho : Form
+    public partial class HoadonXuatkho : Form
     {
-        public HoadonNhapkho()
+        public HoadonXuatkho()
         {
             InitializeComponent();
+        }
+
+        private void HoadonXuatkho_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'ql_vattuDataSet3.Phieuxuat' table. You can move, or remove it, as needed.
+            this.phieuxuatTableAdapter.Fill(this.ql_vattuDataSet3.Phieuxuat);
+
         }
         private void LoadHoaDon()
         {
@@ -51,14 +57,6 @@ namespace Quản_Lí_Kho_Vật_Tư
                 }
             }
         }
-        private void HoadonNhapkho_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'ql_vattuDataSet2.Doitac_NCC' table. You can move, or remove it, as needed.
-            this.doitac_NCCTableAdapter.Fill(this.ql_vattuDataSet2.Doitac_NCC);
-            // TODO: This line of code loads data into the 'ql_vattuDataSet.Phieunhap' table. You can move, or remove it, as needed.
-            this.phieunhapTableAdapter.Fill(this.ql_vattuDataSet.Phieunhap);
-
-        }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
@@ -85,7 +83,7 @@ namespace Quản_Lí_Kho_Vật_Tư
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Nhapkho f = new Nhapkho();
+            Xuatkho f = new Xuatkho();
             f.ShowDialog();
         }
         public void ExportExcel(DataTable tb, string sheetname)
@@ -134,7 +132,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             cl5.Value2 = "TỔNG TIỀN";
             cl5.ColumnWidth = 22.0;
 
-         
+
             ex_cel.Range cl3_1 = oSheet.get_Range("C3", "C1000");
             cl3_1.Columns.NumberFormat = "dd/mm/yyyy";
 
@@ -156,7 +154,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             {
                 DataRow dr = tb.Rows[r];
                 for (int c = 0; c < tb.Columns.Count; c++)
-                        arr[r, c] = dr[c];
+                    arr[r, c] = dr[c];
             }
             //Thiết lập vùng điền dữ liệu
             int rowStart = 4;
@@ -183,13 +181,14 @@ namespace Quản_Lí_Kho_Vật_Tư
             cl_ngs.Columns.NumberFormat = "dd/mm/yyyy";
 
         }
+
         private void btnXuat_Click(object sender, EventArgs e)
         {
             if (Thuvien.con.State == ConnectionState.Closed)
                 Thuvien.con.Open();
             string sql = @" Select ROW_NUMBER() over(order by MaHD) STT,
                     MaHD, Ngaytao, NVtaophieu,TongTien
-                    FROM Phieunhap
+                    FROM Phieuxuat
                     WHERE
                         (@TuNgay IS NULL OR Ngaytao >= @TuNgay)
                         AND (@DenNgay IS NULL OR Ngaytao < DATEADD(DAY, 1, @DenNgay))
@@ -211,7 +210,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             da.Fill(tb);
             cmd.Dispose();
             Thuvien.con.Close();
-            ExportExcel(tb, "DSHoadon");
+            ExportExcel(tb, "DSHoadonxuat");
         }
     }
 }

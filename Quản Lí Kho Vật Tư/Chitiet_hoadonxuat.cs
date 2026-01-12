@@ -11,16 +11,16 @@ using System.Windows.Forms;
 using ex_cel = Microsoft.Office.Interop.Excel;
 namespace Quản_Lí_Kho_Vật_Tư
 {
-    public partial class Chitiet_hoadon : Form
+    public partial class Chitiet_hoadonxuat : Form
     {
         private readonly string _maHD;
-        public Chitiet_hoadon(string maHD)
+        public Chitiet_hoadonxuat(string maHD)
         {
             InitializeComponent();
             _maHD = maHD;
         }
 
-        private void Chitiet_hoadon_Load(object sender, EventArgs e)
+        private void Chitiet_hoadonxuat_Load(object sender, EventArgs e)
         {
             LoadHeader();
             LoadDetail();
@@ -28,8 +28,8 @@ namespace Quản_Lí_Kho_Vật_Tư
         private void LoadHeader()
         {
             string sql = @"SELECT MaHD, Ngaytao, TongTien, NVtaophieu
-          FROM Phieunhap
-          WHERE MaHD = @MaHD";
+                          FROM Phieuxuat
+                          WHERE MaHD = @MaHD";
             using (SqlCommand cmd = new SqlCommand(sql, Thuvien.con))
             {
                 cmd.Parameters.Add("@MaHD", SqlDbType.VarChar, 50).Value = _maHD;
@@ -48,8 +48,6 @@ namespace Quản_Lí_Kho_Vật_Tư
                 }
                 Thuvien.con.Close();
             }
-
-
         }
         private void LoadDetail()
         {
@@ -61,7 +59,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                             ct.SoLuong,
                             ct.GiaNhap,
                             ct.ThanhTien
-                        FROM Phieunhap_CT ct
+                        FROM Phieuxuat_CT ct
                         INNER JOIN QL_Kho k 
                             ON ct.MaVT = k.Mavattu
                         WHERE ct.MaHD = @MaHD";
@@ -78,8 +76,6 @@ namespace Quản_Lí_Kho_Vật_Tư
                     dgvCThoadon.DataSource = dt;
                 }
             }
-            dgvCThoadon.Columns["GiaNhap"].DefaultCellStyle.Format = "N0";
-            dgvCThoadon.Columns["ThanhTien"].DefaultCellStyle.Format = "N0";
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -89,8 +85,8 @@ namespace Quản_Lí_Kho_Vật_Tư
         private DataRow GetPhieuNhapHeader(string maHD)
         {
             string sql = @"SELECT ct.MaHD, pn.Ngaytao, pn.NVtaophieu, pn.TongTien,ct.Doitac
-                   FROM Phieunhap pn 
-                    INNER JOIN Phieunhap_CT ct
+                   FROM Phieuxuat pn 
+                    INNER JOIN Phieuxuat_CT ct
                     ON pn.MaHD=ct.MaHD
                     WHERE ct.MaHD=@MaHD";
 
@@ -155,7 +151,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             oSheet.Range["C4"].Value = nv;
             oSheet.Range["C4"].HorizontalAlignment = ex_cel.XlHAlign.xlHAlignLeft;
 
-            oSheet.Range["E4"].Value = "Đối tác:";
+            oSheet.Range["E4"].Value = "Khách hàng:";
             oSheet.Range["E4"].HorizontalAlignment = ex_cel.XlHAlign.xlHAlignRight;
             oSheet.Range["F4"].Value = dt;
             oSheet.Range["F4"].HorizontalAlignment = ex_cel.XlHAlign.xlHAlignLeft;
@@ -208,7 +204,7 @@ namespace Quản_Lí_Kho_Vật_Tư
             {
                 DataRow dr = tb.Rows[r];
                 for (int c = 0; c < tb.Columns.Count; c++)
-                        arr[r, c] = dr[c];
+                    arr[r, c] = dr[c];
             }
             //Thiết lập vùng điền dữ liệu
             int rowStart = 7;
@@ -246,7 +242,7 @@ namespace Quản_Lí_Kho_Vật_Tư
                 Thuvien.con.Open();
             string sql = @"Select ROW_NUMBER() over(order by ct.MaHD) STT,
                     ct.MaVT, k.Tenvattu, ct.SoLuong, ct.GiaNhap, ct.ThanhTien
-                    FROM Phieunhap_CT ct
+                    FROM Phieuxuat_CT ct
                     JOIN QL_Kho k ON k.Mavattu = ct.MaVT
                     WHERE ct.MaHD = @MaHD";
             SqlCommand cmd = new SqlCommand(sql, Thuvien.con);
