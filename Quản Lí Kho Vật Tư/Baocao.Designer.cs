@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.iMSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bÁNHÀNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,11 +59,15 @@
             this.lbtungay = new System.Windows.Forms.Label();
             this.iconDropDownButton1 = new FontAwesome.Sharp.IconDropDownButton();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dgvbaocao = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvbaocao)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -190,8 +194,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnxuat);
-            this.panel1.Controls.Add(this.btnthongke);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.dtpDenNgay);
             this.panel1.Controls.Add(this.dtpTuNgay);
             this.panel1.Controls.Add(this.lbdenngay);
@@ -200,13 +203,13 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.panel1.Location = new System.Drawing.Point(0, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1241, 61);
+            this.panel1.Size = new System.Drawing.Size(1241, 68);
             this.panel1.TabIndex = 3;
             // 
             // btnxuat
             // 
-            this.btnxuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnxuat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnxuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnxuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnxuat.ForeColor = System.Drawing.SystemColors.Control;
             this.btnxuat.IconChar = FontAwesome.Sharp.IconChar.FileExport;
@@ -214,26 +217,28 @@
             this.btnxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnxuat.IconSize = 37;
             this.btnxuat.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnxuat.Location = new System.Drawing.Point(991, 10);
+            this.btnxuat.Location = new System.Drawing.Point(182, 3);
             this.btnxuat.Name = "btnxuat";
-            this.btnxuat.Size = new System.Drawing.Size(135, 41);
+            this.btnxuat.Size = new System.Drawing.Size(173, 62);
             this.btnxuat.TabIndex = 10;
             this.btnxuat.Text = "Xuất Excel";
             this.btnxuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnxuat.UseVisualStyleBackColor = false;
+            this.btnxuat.Click += new System.EventHandler(this.btnxuat_Click);
             // 
             // btnthongke
             // 
             this.btnthongke.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnthongke.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnthongke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnthongke.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnthongke.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.btnthongke.IconColor = System.Drawing.Color.White;
             this.btnthongke.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnthongke.IconSize = 38;
-            this.btnthongke.Location = new System.Drawing.Point(831, 10);
+            this.btnthongke.Location = new System.Drawing.Point(3, 3);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(154, 41);
+            this.btnthongke.Size = new System.Drawing.Size(173, 62);
             this.btnthongke.TabIndex = 4;
             this.btnthongke.Text = "Thống kê";
             this.btnthongke.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -283,68 +288,101 @@
             // 
             // chart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
+            chartArea4.Name = "ChartArea1";
+            this.chart.ChartAreas.Add(chartArea4);
             this.chart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Alignment = System.Drawing.StringAlignment.Center;
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend1.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(0, 115);
+            legend4.Alignment = System.Drawing.StringAlignment.Center;
+            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend4.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
+            legend4.Name = "Legend1";
+            this.chart.Legends.Add(legend4);
+            this.chart.Location = new System.Drawing.Point(0, 0);
             this.chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Nhập";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Xuất";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Tồn";
-            this.chart.Series.Add(series1);
-            this.chart.Series.Add(series2);
-            this.chart.Series.Add(series3);
-            this.chart.Size = new System.Drawing.Size(1241, 505);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Nhập";
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Xuất";
+            series12.BorderWidth = 3;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Legend = "Legend1";
+            series12.MarkerSize = 7;
+            series12.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series12.Name = "Tồn";
+            this.chart.Series.Add(series10);
+            this.chart.Series.Add(series11);
+            this.chart.Series.Add(series12);
+            this.chart.Size = new System.Drawing.Size(1241, 330);
             this.chart.TabIndex = 4;
             this.chart.Text = "chart";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            title1.Name = "Title";
-            title1.Text = "THỐNG KÊ NHẬP-XUẤT-TỒN";
-            this.chart.Titles.Add(title1);
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            title4.Name = "Title";
+            title4.Text = "THỐNG KÊ NHẬP-XUẤT-TỒN";
+            this.chart.Titles.Add(title4);
+            this.chart.Click += new System.EventHandler(this.chart_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.chart);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 122);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1241, 330);
+            this.panel2.TabIndex = 6;
             // 
             // dgvbaocao
             // 
             this.dgvbaocao.AllowUserToAddRows = false;
-            this.dgvbaocao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvbaocao.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
+            this.dgvbaocao.CausesValidation = false;
             this.dgvbaocao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvbaocao.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvbaocao.Location = new System.Drawing.Point(0, 470);
+            this.dgvbaocao.Location = new System.Drawing.Point(0, 452);
             this.dgvbaocao.Name = "dgvbaocao";
             this.dgvbaocao.ReadOnly = true;
             this.dgvbaocao.RowHeadersWidth = 51;
             this.dgvbaocao.RowTemplate.Height = 24;
-            this.dgvbaocao.Size = new System.Drawing.Size(1241, 150);
+            this.dgvbaocao.Size = new System.Drawing.Size(1241, 168);
             this.dgvbaocao.TabIndex = 5;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnxuat, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnthongke, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(883, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 68);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // Baocao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1241, 620);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvbaocao);
-            this.Controls.Add(this.chart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Name = "Baocao";
             this.Text = "Baocao";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvbaocao)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,6 +415,8 @@
         private FontAwesome.Sharp.IconButton btnxuat;
         private FontAwesome.Sharp.IconDropDownButton iconDropDownButton1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvbaocao;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

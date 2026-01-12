@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quản_Lí_Kho_Vật_Tư.ql_vattuDataSetTableAdapters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
